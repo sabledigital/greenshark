@@ -1,5 +1,92 @@
 extends layout
 
+block styles
+  link(rel="stylesheet", href="/stylesheets/index.css")
+block scripts
+
 block content
-  h1= title
-  p Welcome to #{title}
+  .jumbotron.main-contain.animated.fadeIn
+    .container.text-center.punchline 
+        .col-md-12
+          .col-md-10.offset-md-1
+            h1.white Desarrollamos talento, detonamos crecimiento
+            p Green Shark está enfocada en agregar valor a partir de la ciencia de datos y las mejores tecnologías. Desarrollamos talento y detonamos crecimiento para nuestros clientes. Mejor información y mejores decisiones para que comiences a construir tu futuro ahora.
+        .col-md-12 
+        .col-md-6.offset-md-3
+          .input-group.input-group-lg.form_style
+            input.form-control(type='text', placeholder='E-mail')
+            span.input-group-btn
+              button.btn.btn-secondary(type='button') Quiero mas info
+  .container.text-center
+      a(href="#")
+        i.fa.fa-chevron-down(aria-hidden='true')
+  .container.paths-index
+    .title PATHS
+    .row
+      .col-md-4.hvr-bob.item-path-mini
+        .content-path-head 
+          .text-center.path-1
+            img(src="/images/big.svg", alt="")
+          .title-path Big Data
+        .content2-path-head Serás capaz de proponer y elegir tecnologías para montar una arquitectura de Big Data para tu organización o proyecto.
+        .time-path-mini.text-center 160 horas (9-12 meses)
+        .btn-path-mini.text-center Incribirme
+      .col-md-4.hvr-bob.item-path-mini
+        .content-path-head
+          .text-center.path-2
+            img(src="/images/data.svg", alt="")
+          .title-path Data Science
+        .content2-path-head Diseñaras soluciones a problemas diversos siempre agregando valor al negocio o proyecto a partir de entender el fenómeno con datos.  
+        .time-path-mini.text-center 160 horas (9-12 meses)
+        .btn-path-mini.text-center Incribirme
+      .col-md-4.hvr-bob.item-path-mini
+        .content-path-head
+          .text-center.path-3
+            img(src="/images/social.svg", alt="")
+          .title-path Data Analysis for Social Sciences
+        .content2-path-head Aprenderás a obtener, estructurar y analizar la información de manera ordenada y eficiente para entender qué es lo que dicen. 
+        .time-path-mini.text-center 160 horas (9-12 meses)
+        .btn-path-mini.text-center Incribirme
+  .jumbotron.techno-index
+      .title Tecnologías
+      .row
+        .col-md-1.text-center
+          i.fa.fa-chevron-left(aria-hidden='true')
+        .col-md-10
+          .row
+            .col-md-5.text-center.img-techno
+              img(src="/images/couch.svg", alt="")
+            .col-md-7.text-justify.txt-techno.align-middle Diseñaras soluciones a problemas diversos siempre agregando valor al negocio o proyecto a partir de entender el fenómeno con datos.Diseñaras soluciones a problemas diversos siempre agregando valor al negocio o proyecto a partir de entender el fenómeno con datos.  
+        .col-md-1.text-center
+          i.fa.fa-chevron-right(aria-hidden='true')
+      .d-flex.flex-row.tech-options
+        img.hvr-float(src="/images/tech/flume.svg", alt="")
+        img.hvr-float(src="/images/tech/qoop.svg", alt="")
+        img.hvr-float(src="/images/tech/jupitor.svg", alt="")
+        img.hvr-float(src="/images/tech/oozie.svg", alt="")
+        img.hvr-float(src="/images/tech/couch.svg", alt="")
+        img.hvr-float(src="/images/tech/db.svg", alt="")
+        img.hvr-float(src="/images/tech/hadoop.svg", alt="")
+        img.hvr-float(src="/images/tech/jupitor.svg", alt="")
+        img.hvr-float(src="/images/tech/kafka.svg", alt="")   
+        img.hvr-float(src="/images/tech/cassandra.svg", alt="")
+        img.hvr-float(src="/images/tech/phyton.svg", alt="")
+        img.hvr-float(src="/images/tech/mongo.svg", alt="")
+        img.hvr-float(src="/images/tech/gephi.svg", alt="")
+        img.hvr-float(src="/images/tech/sql.svg", alt="")
+        img.hvr-float(src="/images/tech/spark.svg", alt="")
+        img.hvr-float(src="/images/tech/tableu.svg", alt="")
+        img.hvr-float(src="/images/tech/tensor.svg", alt="")
+        img.hvr-float(src="/images/tech/the-hive.svg", alt="")
+
+
+
+
+
+
+
+
+
+
+
+

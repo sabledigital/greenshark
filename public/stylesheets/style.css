@@ -1,8 +1,254 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* *********************** */
+/*        FONTS            */
+/* *********************** */
+
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Miriam+Libre:400,700');
+
+
+body,a,p,ul,button,.form-control{
+	font-family: 'Miriam Libre', sans-serif;
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+
+
+
+h1{
+	font-family: 'Lora', serif !important;
+}
+
+.title{
+	font-size: 21px;
+	font-family: 'Lora', serif !important;
+	color: gray;
+}
+
+
+/* *********************** */
+/*        COLOR            */
+/* *********************** */
+
+.white{
+	color: #f3f3f3;
+}
+
+/* *********************** */
+/*        BASICS           */
+/* *********************** */
+
+
+button{
+	cursor: pointer;
 }
 
 a {
-  color: #00B7FF;
+  color: inherit;
+}
+
+a:hover {
+  color: #00FFFF;
+}
+/*img:hover{
+	opacity: .5;
+}*/
+
+
+
+/* *********************** */
+/*          Navbar         */
+/* *********************** */
+
+.main-register .nav-link{
+	background-color: #00FFFF;
+	border-radius: 4px;
+	padding-left: 6px !important;
+	padding-right: 6px !important;
+	padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.main-register{
+	    margin-left: 12px;
+    margin-right: 14px;
+}
+
+.navbar{
+	position: fixed;
+	width: 100%;
+}
+
+.dropdown-menu{
+	background-color: rgba(0,0,0,0);
+}
+
+.navbar,.navbar-brand{
+	padding-top: 0px !important;
+	    z-index: 1;
+}
+
+.navbar-nav{
+	margin-left: auto;
+}
+
+.navbar-light .navbar-nav .active>.nav-link{
+	text-align: center;
+}
+
+.nav-logo{
+	border-radius: 0 0 8px 8px;
+	background-color: white;
+	box-shadow:0px 0px 6px #cac7c7;
+	padding: 25px;
+	margin-left: 2em;
+}
+.nav-logo img{
+
+}
+
+.nav-link{
+ font-size: .9em;
+ font-weight: bolder;
+}
+
+.navbar-toggleable-md .navbar-nav .nav-link{
+	    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+
+
+
+	.dropdown-item {
+			font-size: 14px;
+    font-weight: bolder !important;
+
+    padding: 0px;
+	color: #f3f3f3;
+	margin-bottom: 10px;
+	padding-left: 43px;
+	padding-right: 23px;
+	padding-top: 5px;
+    padding-bottom: 5px;
+    color: rgba(0,0,0,.5);
+	    
+	}
+.dropdown-menu{
+	
+	border:0px;
+}
+
+.dropdown-item:focus, .dropdown-item:hover{
+	background-color: rgba(0,0,0,0);
+	
+}
+
+/* *********************** */
+/*         FOOTER          */
+/* *********************** */
+
+
+
+.register-now{
+		background: url(/images/register-now.png); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	margin-top: 30px;
+	border-radius: 0px;
+	margin-bottom: 0;
+}
+
+.register-now .form-control{
+	border:0px;
+}
+
+.register-now .btn{
+	background-color: #00FFFF;
+	border: 0px;
+}
+
+.register-now .btn:hover{
+	border: 0;
+}
+
+
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 300px;
+      }
+      /* Optional: Makes the sample page fill the window. */
+
+
+.section3-foot{
+		border-left: .5px solid gray;
+		padding-left: 10em;
+}
+
+.foot-row li{
+list-style-type: none;	
+    padding-left: 19px;
+    padding-top: 10px;
+}
+
+
+.foot-row{
+	padding-top: 50px;
+	padding-bottom: 80px;
+}
+
+.foot-row>div{
+	padding-top: 80px;
+
+}
+
+
+
+.social-icon img{
+	height: 22px;
+	margin:20px;	
+}
+
+.shark{
+	margin-top: 20px;
+}
+
+/* *********************** */
+/*     Media               */
+/* *********************** */
+
+
+@media (max-width: 992px) {
+	.nav-logo{
+		    margin-left: 0;
+	}
+	.navbar-brand{
+		margin-right: 0px;
+	}
+
+	.navbar-light .navbar-toggler{
+		    margin-top: 24px;
+    		margin-right: 20px;
+		border:0px;
+		z-index: 2;
+	}
+	.navbar, .navbar-brand{
+		/*background-color: whitesmoke;*/
+	}
+
+	.navbar{
+		width: 100%;
+	}
+	.navbar-collapse{
+		    background-color: rgba(255, 253, 253, 0.9);
+    padding: 23px;
+    border-radius: 4px;
+    font-size: 20px;
+    text-align: center;
+	}
+	.main-contain{
+		    padding-top: 4em !important;
+	}
+
 }

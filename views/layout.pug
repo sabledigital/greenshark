@@ -2,6 +2,116 @@ doctype html
 html
   head
     title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    link(rel='stylesheet', href='https://use.fontawesome.com/4a33440094.css')
+    link(rel='stylesheet', href='/vendor/hover.css')
+    link(rel='stylesheet', href='/vendor/animate.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    block styles
   body
+    nav.navbar.navbar-toggleable-md.navbar-light
+      button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarText', aria-controls='navbarText', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon.animated.fadeInDown  
+      a.navbar-brand(href='#').animated.fadeInDown 
+        .nav-logo
+            img(src="/images/logo.png", alt="")
+            
+      #navbarText.collapse.navbar-collapse
+        ul.navbar-nav.pull-xs-right
+          li.nav-item
+            a.nav-link(href='#') Home
+          li.nav-item
+            a.nav-link(href='#') Nosotros
+          li.nav-item.dropdown
+            a#dropdown03.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true') Curso
+            .dropdown-menu
+                a.dropdown-item(href='#') Curso
+                a.dropdown-item(href='#') Curso
+                a.dropdown-item(href='#') Curso
+          li.nav-item.dropdown
+            a#dropdown03.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true') Path
+            .dropdown-menu
+                a.dropdown-item(href='#') Path
+                a.dropdown-item(href='#') Path
+                a.dropdown-item(href='#') Path
+
+          li.nav-item
+            a.nav-link(href='#') Contacto
+          li.nav-item.main-register
+            a.nav-link(href='#') Inscribete
+
+    
     block content
+    .jumbotron.text-center.register-now
+      p 
+        strong Regístrate ahora y se parte de algo increíble
+      br
+      .col-md-4.offset-md-4.puchline
+          .input-group.input-group-lg.form_style
+            input.form-control(type='text', placeholder='E-mail')
+            span.input-group-btn
+              button.btn.btn-secondary(type='button') Quiero mas info
+          br
+          a.small(href="#") 
+            strong Explorar cursos
+    #map
+    .final_foot
+      .container
+        .row.foot-row
+          .col-md-3
+              ul
+                strong Paths
+                li 
+                  a(href="#")
+                    small Introducción a Big Data
+                li 
+                  a(href="#")
+                    small Big Data Engineer
+                li 
+                  a(href="#")
+                    small Introducción a Ciencia de Datos con Python
+          .col-md-3
+              ul
+                strong Cursos
+                li 
+                  a(href="#")
+                    small Big Data
+                li 
+                  a(href="#")
+                    small Data Science
+                li 
+                  a(href="#")
+                    small Data Analysis
+          .col-md-6.section3-foot 
+            small
+              a(href="mailto:hola@greenshark.com") hola@greenshark.com
+            br
+            small 
+              a(href="tel:55-23-12-23") 55-23-12-23 
+              span |
+              a(href="tel:(55)-32-23-12") (55)-32-23-12
+            br
+            small Calle numero #50 Int. 45 Colonia Cuauhtemoc, CDMX, México 07929.
+        .text-center.social-icon
+          a(href="#")
+            img(src="/images/face.svg", alt="")
+          a(href="#")
+            img(src="/images/tweet.svg", alt="")
+          a(href="#")
+            img(src="/images/you.svg", alt="")
+        .shark.text-center
+          img(src="/images/shark.png", alt="")
+
+
+
+    script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn', crossorigin='anonymous')
+    script(src="/javascripts/main.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5AI39fyZxyKYCeDIqDgY3_07flG4yXXA&callback=initMap"
+    async defer)
+
+    block scripts
+
