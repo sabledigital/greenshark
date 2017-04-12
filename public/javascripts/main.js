@@ -293,8 +293,9 @@ function w_bar(){
   flag=true;
   
   $( window ).scroll(function() {
-    
+      
       scroll_pos=document.body.scrollTop;
+      console.log(scroll_pos)
       if(scroll_pos==0){
            
             no_bar();
@@ -382,3 +383,89 @@ $input_email_foot.on('keyup', function () {
   console.log($input_email_foot)
     validarFormularioEmail($input_email_foot);
 });
+
+
+
+// *****************************
+// *************** Hover triggers
+// *****************************
+$("#dropdown04").hover(function() {
+  $("#dropdown04").trigger('click');
+  $(".dropdown-menu").jAnimateOnce("fadeIn");
+}, function() {
+  /* Stuff to do when the mouse leaves the element */
+
+});
+
+$("#dropdown03").hover(function() {
+  $("#dropdown03").trigger('click');
+  $(".dropdown-menu").jAnimateOnce("fadeIn");
+}, function() {
+  /* Stuff to do when the mouse leaves the element */
+
+});
+
+// *****************************
+// *************** Form triggers
+// *****************************
+
+$(".direct").click(function(event) {
+  formIn();
+});
+
+$(".remove-in").click(function(event) {
+  formInRemove();
+});
+
+$(".puchline .btn").click(function() {
+   mail=$("#footer-form").val();
+   if (mail=="") {
+   }else
+   formIn($(".puchline input").val());
+});
+
+
+$(".index-form .btn").click(function() {
+   mail=$("#head-index-form").val();
+   if (mail=="") {
+   }else
+   formIn($(".index-form input").val());
+});
+
+
+function formIn(email,path){
+
+$("body").css("overflow","hidden");
+$(".form-in").removeClass('hidden');  
+$(".form-in").jAnimateOnce("fadeIn");
+
+
+
+
+
+
+  if(email){
+    $(".header-in").html("Hola <br><h4 class='green'>"+email+"</h4>");
+    $(".email-in").addClass('hidden');
+  }
+
+
+
+
+
+
+}
+
+
+
+function formInRemove(){
+  $(".form-in").jAnimateOnce("fadeOut",function(){
+        $("body").css("overflow","scroll");
+        $(".form-in").addClass('hidden');
+  });
+
+}
+
+
+
+

@@ -1,0 +1,55 @@
+.form-in.d-flex.justify-content-center.hidden
+    .register-in
+        .text-right.remove-in.req.hvr-buzz
+            i.fa.fa-times(aria-hidden='true')
+        h1.header-in Registro
+        p.tell-in En poco tiempo ya estaras disfrutando de conocimientos nuevos y nuevas experiencias :D.
+        br
+        form
+            .form-group.email-in
+              label(for='exampleInputEmail1') E-mail 
+                span.req *
+              input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Introduce tu  e-mail',autocomplete="on")
+              small#emailHelp.form-text.text-muted No te preocupes, nunca compartiremos tu mail con nadie :D
+            .form-group.name-in
+              label(for='exampleInputname1') Nombre 
+                span.req *
+              input#exampleInputname1.form-control(type='name', aria-describedby='nameHelp', placeholder='Introduce tu nombre')
+            .form-group.tel-in
+              label(for='exampleInputtel1') Teléfono 
+                span.req *
+              input#exampleInputtel1.form-control(type='tel', aria-describedby='telHelp', placeholder='Introduce tu teléfono')
+            .hidden.form-group.text-in
+              label(for='exampleInputtel1') ¿En que te podemos ayudar? 
+                span.req *
+              textarea#exampleInputtext1.form-control(type='text', aria-describedby='textHelp', placeholder='Introduce tu teléfono')
+            .form-group.path-in
+              label(for='exampleInputpath1') ¿Que curso o path te interesa? 
+                span.req *
+              select#exampleInputpath1.form-control(type='path', aria-describedby='pathHelp', placeholder='Introduce tu teléfono')
+                option(value="1") curso 1
+                option(value="1") curso 2
+                option(value="1") curso 3
+                option(value="1") curso 4
+            a.btn.btn-primary(href="#") Enviar
+    .hidden.col-md-2.hvr-float.path-select
+            .one-segment
+              .top.curso1
+                .tag 
+                  .lett curso
+                .sq
+              .bottom.text-center
+                strong  Introducción a Big Data
+                br
+                br
+                strong.time 1 Semana | 20 horas
+    .hidden.col-md-4.path-index.path-select
+        .col-md-12.item-path-mini
+          .content-path-head 
+            .text-center.path-1
+              img(src="/images/big.svg", alt="")
+            .title-path Big Data
+          .content2-path-head Serás capaz de proponer y elegir tecnologías para montar una arquitectura de Big Data para tu organización o proyecto.
+          .time-path-mini.text-center 160 horas (9-12 meses)
+          .btn-path-mini.text-center Saber más
+
