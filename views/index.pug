@@ -14,7 +14,7 @@ block content
         .col-md-12 
         .col-md-6.offset-md-3
           .input-group.input-group-lg.form_style
-            input.form-control(type='text', placeholder='E-mail')
+            input#head-index-form.form-control(type='text', placeholder='E-mail')
             span.input-group-btn
               button.btn.btn-secondary(type='button') Quiero mas info
   .container.text-center
@@ -23,30 +23,45 @@ block content
   .container.paths-index
     .title PATHS
     .row
-      .col-md-4.hvr-bob.item-path-mini
-        .content-path-head 
-          .text-center.path-1
-            img(src="/images/big.svg", alt="")
-          .title-path Big Data
-        .content2-path-head Serás capaz de proponer y elegir tecnologías para montar una arquitectura de Big Data para tu organización o proyecto.
-        .time-path-mini.text-center 160 horas (9-12 meses)
-        .btn-path-mini.text-center Incribirme
-      .col-md-4.hvr-bob.item-path-mini
-        .content-path-head
-          .text-center.path-2
-            img(src="/images/data.svg", alt="")
-          .title-path Data Science
-        .content2-path-head Diseñaras soluciones a problemas diversos siempre agregando valor al negocio o proyecto a partir de entender el fenómeno con datos.  
-        .time-path-mini.text-center 160 horas (9-12 meses)
-        .btn-path-mini.text-center Incribirme
-      .col-md-4.hvr-bob.item-path-mini
-        .content-path-head
-          .text-center.path-3
-            img(src="/images/social.svg", alt="")
-          .title-path Data Analysis for Social Sciences
-        .content2-path-head Aprenderás a obtener, estructurar y analizar la información de manera ordenada y eficiente para entender qué es lo que dicen. 
-        .time-path-mini.text-center 160 horas (9-12 meses)
-        .btn-path-mini.text-center Incribirme
+      .col-md-4.item-path-mini
+        .hvr-float
+          .content-path-head 
+            .text-center.path-1
+              img(src="/images/big.svg", alt="")
+            .title-path Big Data
+          .content2-path-head Serás capaz de proponer y elegir tecnologías para montar una arquitectura de Big Data para tu organización o proyecto.
+          .time-path-mini.text-center 160 horas (9-12 meses)
+          .btn-path-mini.text-center Saber más
+        .text-center
+          br
+          small 
+              a(href="#") Explorar los cursos
+      .col-md-4.item-path-mini
+        .hvr-float
+          .content-path-head
+            .text-center.path-2
+              img(src="/images/data.svg", alt="")
+            .title-path Data Science
+          .content2-path-head Diseñaras soluciones a problemas diversos siempre agregando valor al negocio o proyecto a partir de entender el fenómeno con datos.  
+          .time-path-mini.text-center 160 horas (9-12 meses)
+          .btn-path-mini.text-center Saber más
+        .text-center
+          br
+          small 
+              a(href="#") Explorar los cursos
+      .col-md-4.item-path-mini
+        .hvr-float
+          .content-path-head
+            .text-center.path-3
+              img(src="/images/social.svg", alt="")
+            .title-path Data Analysis for Social Sciences
+          .content2-path-head Aprenderás a obtener, estructurar y analizar la información de manera ordenada y eficiente para entender qué es lo que dicen. 
+          .time-path-mini.text-center 160 horas (9-12 meses)
+          .btn-path-mini.text-center Saber más
+        .text-center
+          br
+          small 
+              a(href="#") Explorar los cursos
   .jumbotron.techno-index
       .title Tecnologías
       .row
@@ -78,6 +93,40 @@ block content
         img.hvr-float(src="/images/tech/tableu.svg", alt="")
         img.hvr-float(src="/images/tech/tensor.svg", alt="")
         img.hvr-float(src="/images/tech/the-hive.svg", alt="")
+
+  .container.intro1.intr
+    .row
+      .col-md-6
+        img(src="/images/intro1.svg", alt="")
+      .col-md-6.text-justify
+        h4 Romper la brecha de género
+        br
+        p En el mundo, del total de desarrolladores las mujeres son sólo el 7.6% vs 88% de hombres. Esta brecha es todavía más grande en la ciencia de datos donde el ratio es de 1 mujer por cada 14 hombres. Creemos que estas diferencias no se deben a falta de talento ni entusiasmo por la tecnología, sino a una marcada desigualdad de oportunidades. En GreenShark queremos apoyar a todas las mujeres que quieran romper esta brecha.
+  .container.intro1.intr
+    .row
+      .col-md-6.text-justify
+        h4 Romper la brecha de género
+        br
+        p En el mundo, del total de desarrolladores las mujeres son sólo el 7.6% vs 88% de hombres. Esta brecha es todavía más grande en la ciencia de datos donde el ratio es de 1 mujer por cada 14 hombres. Creemos que estas diferencias no se deben a falta de talento ni entusiasmo por la tecnología, sino a una marcada desigualdad de oportunidades. En GreenShark queremos apoyar a todas las mujeres que quieran romper esta brecha.
+      .col-md-6
+        img(src="/images/intro2.svg", alt="")
+  .container.intro1.intr
+    .row
+      .col-md-6
+        img(src="/images/intro3.svg", alt="")
+      .col-md-6.text-justify
+        h4 Romper la brecha de género
+        br
+        p En el mundo, del total de desarrolladores las mujeres son sólo el 7.6% vs 88% de hombres. Esta brecha es todavía más grande en la ciencia de datos donde el ratio es de 1 mujer por cada 14 hombres. Creemos que estas diferencias no se deben a falta de talento ni entusiasmo por la tecnología, sino a una marcada desigualdad de oportunidades. En GreenShark queremos apoyar a todas las mujeres que quieran romper esta brecha.
+  .container.intro1.intr
+    .row
+      .col-md-6.text-justify
+        h4 Romper la brecha de género
+        br
+        p En el mundo, del total de desarrolladores las mujeres son sólo el 7.6% vs 88% de hombres. Esta brecha es todavía más grande en la ciencia de datos donde el ratio es de 1 mujer por cada 14 hombres. Creemos que estas diferencias no se deben a falta de talento ni entusiasmo por la tecnología, sino a una marcada desigualdad de oportunidades. En GreenShark queremos apoyar a todas las mujeres que quieran romper esta brecha.
+      .col-md-6
+        img(src="/images/intro4.svg", alt="")
+
 
 
 

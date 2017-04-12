@@ -265,3 +265,120 @@
         });
         map.setOptions({'scrollwheel': false});
       }
+
+// *****************************
+// *************** NAVBAR
+// *****************************
+
+function w_bar(){
+  
+  $("#navbarText").addClass('scroll-nav')
+  $("#navbarText").jAnimateOnce("fadeInDown")
+
+}
+  
+  function no_bar(){
+  $("#navbarText").jAnimateOnce("fadeOutUp",function(){
+    $("#navbarText").removeClass('scroll-nav')
+    $("#navbarText").jAnimateOnce("fadeInDown")
+  });
+     
+     
+
+
+  }
+
+  
+// SCROLL FUNCTION  
+  flag=true;
+  
+  $( window ).scroll(function() {
+    
+      scroll_pos=document.body.scrollTop;
+      if(scroll_pos==0){
+           
+            no_bar();
+            flag=true;
+            
+           }else{
+             
+             if(flag){ 
+               w_bar();
+               flag=false;}
+                       
+           }
+  
+  });
+  
+
+
+// *****************************
+// *************** Validation
+// *****************************
+
+message_incorrect= "Este mail es <strong> incorrecto </strong>";
+
+message_incorrect2= "Vuelve a revisar el formulario";
+message_wrong="Este mail es <strong> incorrecto </strong>"
+message_empty="Proporciona un mail por favor";
+
+function validateEmail(sEmail) {
+  var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+  if (filter.test(sEmail)) {
+    return true;  
+    
+  }
+  else {
+    return false;
+    
+  }
+}
+
+
+function validarFormularioEmail(input){
+
+
+  form_text=$(input).val();
+  console.log(form_text);
+
+  if(form_text == ""){
+      // $("#message_validation").html(message_empty);
+      // $("#message_validation").jAnimate("fadeInDown");
+      $(input).removeClass('ok-form');
+      $(input).addClass('not-form');
+      console.log("vacio");
+      message_incorrect=message_empty;
+      return false;
+
+
+  }else{
+    if (validateEmail(form_text)) {
+      $(input).removeClass('not-form');
+      $(input).addClass('ok-form');
+      console.log("bien");
+      return true;
+
+    }else{
+      $(input).removeClass('ok-form');
+      $(input).addClass('not-form');
+      console.log("mal");
+      message_incorrect=message_wrong;
+      return false;
+    }
+  }
+}
+// *****************************
+// *************** Validation TRIGGERS
+// *****************************
+
+var $input_email = $('#head-index-form');
+$input_email.on('keyup', function () {
+  console.log($input_email)
+    validarFormularioEmail($input_email);
+});
+
+var $input_email_foot = $('#footer-form');
+$input_email_foot.on('keyup', function () {
+  console.log($input_email_foot)
+    validarFormularioEmail($input_email_foot);
+});

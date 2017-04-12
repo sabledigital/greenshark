@@ -1,0 +1,84 @@
+.profile{
+
+}
+
+.photo{
+	background-image: url("../images/profile.png");
+	border:solid 10px black;
+	background-size: cover;
+}
+
+.sq{
+	padding-top: 100%;
+}
+
+.description{
+	border: .5px solid gray;
+	padding: 2em;
+}
+
+.position{
+	color: #08FFBE;
+}
+
+.profile{
+	margin-bottom: 3em;
+}
+
+.social-profile{
+	text-align: right;
+	width: 100%;
+}
+
+.social-profile img{
+	height: 15px;
+	margin: 10px;
+}
+
+
+/*****************/
+
+.we-say{
+	margin-top: 10em;
+	margin-bottom: 10em;
+}
+
+.pic-we-1{
+	width: 100%;
+	background-image: url("/images/promt.png");
+
+}
+
+.pic-we-per{
+	padding-top: 30%;
+}
+
+.contain-we-1{
+	background-color: #f3f3f3;
+    top: 45px;
+    right: 55px;
+    padding: 1em;
+    font-size: 14px;
+}
+
+.contain-we-2{
+	background-color: #f3f3f3;
+    top: 45px;
+    right: -55px;
+    padding: 1em;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 992px) {
+	.contain-we-2,.contain-we-1{
+		top: inherit;
+		right: inherit;
+	}
+
+	.we-say{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	}
+}

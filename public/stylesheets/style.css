@@ -5,13 +5,23 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Miriam+Libre:400,700');
 
 
+.error{
+	padding-top: 18em;
+	margin-bottom: 10em;
+}
+.error strong{
+	color: #0098EE;
+}
+
 body,a,p,ul,button,.form-control{
 	font-family: 'Miriam Libre', sans-serif;
 	letter-spacing: 1px;
 	font-size: 14px;
 }
 
-
+.main-contain-slash{
+	padding-top: 10em;
+}
 
 h1{
 	font-family: 'Lora', serif !important;
@@ -22,6 +32,7 @@ h1{
 	font-family: 'Lora', serif !important;
 	color: gray;
 }
+
 
 
 /* *********************** */
@@ -57,6 +68,16 @@ a:hover {
 /* *********************** */
 /*          Navbar         */
 /* *********************** */
+
+.scroll-nav{
+	    background-color: rgba(240, 248, 255, 0.91);
+    padding: 18px;
+    width: 100vw;
+    position: fixed;
+    margin: 0px;
+    top: 0;
+    left: 0;
+}
 
 .main-register .nav-link{
 	background-color: #00FFFF;
@@ -215,8 +236,58 @@ list-style-type: none;
 }
 
 /* *********************** */
+/*     FORM              */
+/* *********************** */
+/*.ok-form{
+	box-shadow: 0px 0px 1px 2px #24ce24;
+}
+.not-form{
+	box-shadow: 0px 0px 1px 2px red;
+}*/
+.punchline{
+	    top: 16vh;
+    position: relative;
+}
+
+.form_style{
+	z-index: 0;
+}
+
+.punchline .btn{
+	background-color: #00FFFF;
+	border:0;
+}
+
+.punchline .form-control{
+	border:0;
+}
+
+.form_style{
+	box-shadow: 0 0px 7px 1px rgba(52, 53, 60, 0.25);
+    border-radius: 10px;
+}
+.form-control{
+	font-size: 14px !important;
+}
+
+.input-group-lg>.input-group-btn>.btn,.input-group-lg>.form-control {
+	padding: 1rem 1.5rem
+}
+
+.input-group-lg>.input-group-btn>.btn:hover{
+	background-color: #00ffde;
+	color: white;
+}
+
+.input-group-lg>.input-group-btn>.btn{
+	font-size: 14px;
+	font-weight: 800;
+}
+/* *********************** */
 /*     Media               */
 /* *********************** */
+
+
 
 
 @media (max-width: 992px) {
@@ -249,6 +320,10 @@ list-style-type: none;
 	}
 	.main-contain{
 		    padding-top: 4em !important;
+	}
+
+	.section3-foot{
+		padding-left: 4em;
 	}
 
 }
