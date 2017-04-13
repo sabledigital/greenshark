@@ -22,4 +22,44 @@ router.get('/contacto', function(req, res, next) {
   res.render('contacto', { title: 'Greenshark' });
 });
 
+
+
+//CURSOS
+
+//Template
+router.get('/curso_temp', function(req, res, next) {
+  res.render('curso_temp', { title: 'Greenshark' });
+});
+
+
+//cursos
+
+router.get('/curso1', function(req, res, next) {
+  res.render('curso1', { title: 'Greenshark' });
+});
+
+router.get('/curso2', function(req, res, next) {
+  res.render('curso2', { title: 'Greenshark' });
+});
+
+router.get('/curso3', function(req, res, next) {
+  res.render('curso3', { title: 'Greenshark' });
+});
+
+//paths
+router.get('/path1', function(req, res, next) {
+  res.render('path1', { title: 'Greenshark' });
+});
+
+router.get('/path2', function(req, res, next) {
+  res.render('path2', { title: 'Greenshark' });
+});
+
+router.get('/path3', function(req, res, next) {
+  res.render('path3', { title: 'Greenshark' });
+});
+
+
+
+
 module.exports = router;

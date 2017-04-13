@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Miriam+Libre:400,700');
 
+a:hover{
+	text-decoration: none;
+}
+
 .hidden{
 	display: none !important;
 }
@@ -35,6 +39,30 @@ h1{
 	color: gray;
 }
 
+.tools{
+	position: fixed;
+    right: 19px;
+    z-index: 80;
+    top: 39vh;
+}
+
+.home, .up{
+    border: black solid 1.4px;
+    margin-top: 1em;
+    /* padding: 2em; */
+    height: 50px;
+    width: 50px;
+    padding-top: 25%;
+    border-radius: 50%;
+    text-align: center;
+    opacity: .7;
+    cursor: pointer;
+}
+
+.home:hover, .up:hover{
+	opacity: .2;
+	color: black;
+}
 
 
 /* *********************** */
@@ -42,7 +70,7 @@ h1{
 /* *********************** */
 
 .white{
-	color: #f3f3f3;
+	color: #f3f3f3 !important;
 }
 
 .green{
@@ -50,6 +78,13 @@ h1{
 }
 .red{
 	color: red;
+}
+
+.blue{
+	color: #19AFFF;
+}
+.gray{
+	color: gray;
 }
 /* *********************** */
 /*        BASICS           */
@@ -156,7 +191,7 @@ a:hover {
 }
 
 .all-kind{
-	    color: cyan !important;
+	        color: #294242 !important;
     font-weight: 100 !important;
 }
 
@@ -471,7 +506,7 @@ list-style-type: none;
 /* *********************** */
 /*     Cursos              */
 /* *********************** */
-
+.path-select.course-form-2
 
 .segment{
 	padding-top: 10em;
@@ -538,9 +573,12 @@ list-style-type: none;
 /* *********************** */
 
 
-
+.only-mobile{
+	display: none;
+}
 
 @media (max-width: 992px) {
+
 	.nav-logo{
 		    margin-left: 0;
 	}
@@ -575,5 +613,29 @@ list-style-type: none;
 	.section3-foot{
 		padding-left: 4em;
 	}
+
+	.no-mobile{
+		display: none;
+	}
+	.only-mobile{
+		display: block;
+	}
+
+	.tech-options img {
+    max-width: 33.33% !important;
+    cursor: pointer;
+		
+		}
+	.tech-options{
+		display: block !important
+	}
+	.intr{
+		margin-top: 3em !important;
+    margin-bottom: 3em !important;
+	}
+	.intro1 img{
+		margin-bottom: 2em;
+	}
+
 
 }

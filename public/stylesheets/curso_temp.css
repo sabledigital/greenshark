@@ -1,0 +1,147 @@
+.segment{
+	padding-top: 10em;
+}
+
+.modal-c{
+	background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 6px 0 #c5c5c5;
+    background-color: #3C3E50;
+}
+.head-temp{
+	padding: 2em;
+	padding-top: 3.5em;
+}
+
+
+.time-temp{
+	font-size: 1.3em;
+}
+
+.text-temp{
+	padding: 2em;
+	text-align: justify;
+	padding-top: 0px;
+	color: gray;
+}
+
+.dates-temp{
+	background-color: whitesmoke;
+	margin-bottom: 1em;
+	padding: 1em;
+
+}
+
+.days{
+	    border-left: 1px solid #b3b0b0;
+}
+
+.days span{
+	padding: .2em;
+	font-size: .7em;
+}
+
+.niceto{
+padding: 2em;
+}
+
+.title-temp{
+	font-weight: 800;
+}
+
+
+.content{
+	background-color: white;
+	border-radius: 6px 0 0 6px;
+}
+
+.example{
+	background-position: cover;
+	background-position: center;
+	border-radius: 0 6px 6px 0;
+	padding: 0;
+}
+
+.share{
+	padding: 1em;
+
+}
+
+.share small{
+	font-weight: 800;
+	color: #3C3E50;
+}
+
+.share img{
+	height: 12px;
+	padding-left: 10px;
+	opacity: .8;
+}
+
+.cost{
+	padding: 1.5em;
+	background-color:#3C3E50;
+	color: whitesmoke;
+}
+
+.btn-path{
+	position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 1.3em;
+
+}
+
+.btn-path small{
+	width: 100%;
+}
+
+.btn-path .btn{
+	width: 100%;
+	background-color: #00FFFF;
+	padding: 1em;
+	border: 0;
+	color:#3C3E50;
+	cursor: pointer;
+	font-weight: 800;
+}
+
+.btn-path .btn:hover{
+	opacity: .7;
+}
+
+.txt-techno{
+	width: 100%;
+	margin-top: 3em;
+}
+
+.techno-temp{
+	width: 100%;
+	padding: .5em;
+	
+	background-color: whitesmoke;
+
+}
+
+.techno-temp img{
+	max-height: 60px;
+}
+
+.theme-temp{
+	background-color: #0098EE;
+	background-image: url(../images/back_course.svg);
+	background-size: cover;
+	background-position: center;
+	padding: 3em;
+}
+.modal-d{
+	background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 6px 0 #c5c5c5;
+    padding: 2em;
+   
+}
+
+.register-now{
+	margin-top: 0;
+}

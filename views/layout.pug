@@ -12,6 +12,12 @@ html
     block styles
   body
     include form.pug
+    .tools
+      .home
+          i.fa.fa-home(aria-hidden='true')
+      .up
+        i.fa.fa-angle-double-up(aria-hidden='true')
+
     nav.navbar.navbar-toggleable-md.navbar-light
       button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarText', aria-controls='navbarText', aria-expanded='false', aria-label='Toggle navigation')
                 span.navbar-toggler-icon.animated.fadeInDown  
@@ -25,26 +31,30 @@ html
             a.nav-link(href='/') Home
           li.nav-item
             a.nav-link(href='nosotros') Nosotros
+          li.nav-item.only-mobile
+            a.nav-link(href='cursos') Cursos
+          li.nav-item.only-mobile
+            a.nav-link(href='paths') Paths
           li.nav-item.dropdown
-            a#dropdown03.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true') Cursos
+            a#dropdown03.no-mobile.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true') Cursos
             .dropdown-menu 
-                a.dropdown-item(href='#')  Introducción a Big Data
-                a.dropdown-item(href='#') Big Data Engineer
-                a.dropdown-item(href='#') Introducción a Ciencia de Datos con Python
+                a.dropdown-item(href='curso1')  Introducción a Big Data
+                a.dropdown-item(href='curso2') Big Data Engineer
+                a.dropdown-item(href='curso3') Introducción a Ciencia de Datos con Python
 
                 a.dropdown-item.all-kind(href='cursos') Todos los cursos
           li.nav-item.dropdown
-            a#dropdown04.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true') Path
+            a#dropdown04.no-mobile.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true') Path
             .dropdown-menu
-                a.dropdown-item(href='#') Big Data
-                a.dropdown-item(href='#') Data Science
-                a.dropdown-item(href='paths') Data Analysis for Social Sciences
+                a.dropdown-item(href='path1') Big Data
+                a.dropdown-item(href='path2') Data Science
+                a.dropdown-item(href='path3') Data Analysis for Social Sciences
                 a.dropdown-item.all-kind(href='paths') Todos los paths
 
           li.nav-item
             a.nav-link(href='contacto') Contacto
           li.nav-item.main-register
-            a.nav-link.direct(href='#') Inscribete
+            a.nav-link.direct(href='#') Inscríbete
 
 
 
@@ -115,7 +125,8 @@ html
 
 
     
-    script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+
     script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn', crossorigin='anonymous')
     script(src="/vendor/jAnimate.js")

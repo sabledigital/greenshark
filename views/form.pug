@@ -23,6 +23,10 @@
               label(for='exampleInputtel1') ¿En que te podemos ayudar? 
                 span.req *
               textarea#exampleInputtext1.form-control(type='text', aria-describedby='textHelp', placeholder='Introduce tu teléfono')
+            .hidden.form-group.support-in
+              label(for='exampleInputtel1') ¿Cuentanos porque necesitas una beca.? 
+                span.req *
+              textarea#exampleInputtext1.form-control(type='support', aria-describedby='supportHelp', placeholder='Aquí')
             .form-group.path-in
               label(for='exampleInputpath1') ¿Que curso o path te interesa? 
                 span.req *
@@ -32,7 +36,7 @@
                 option(value="1") curso 3
                 option(value="1") curso 4
             a.btn.btn-primary(href="#") Enviar
-    .hidden.col-md-2.hvr-float.path-select
+    .hidden.col-md-2.path-select.course-form-1
             .one-segment
               .top.curso1
                 .tag 
@@ -43,7 +47,33 @@
                 br
                 br
                 strong.time 1 Semana | 20 horas
-    .hidden.col-md-4.path-index.path-select
+    .hidden.col-md-2.path-select.course-form-2
+            .one-segment
+              .top.curso2
+                .tag 
+                  .lett curso
+                .sq
+              .bottom.text-center
+                strong  Big Data Engineer
+                br
+                br
+                strong.time 1 Semana | 20 horas
+    .hidden.col-md-2.path-select.course-form-3
+            .one-segment
+              .top.curso3
+                .tag 
+                  .lett curso
+                .sq
+              .bottom.text-center
+                strong  Introducción a Ciencia de Datos con Python
+                br
+                br
+                strong.time 1 Semana | 20 horas
+
+
+
+
+    .hidden.col-md-4.path-index.path-select.path-form-1
         .col-md-12.item-path-mini
           .content-path-head 
             .text-center.path-1
@@ -51,5 +81,21 @@
             .title-path Big Data
           .content2-path-head Serás capaz de proponer y elegir tecnologías para montar una arquitectura de Big Data para tu organización o proyecto.
           .time-path-mini.text-center 160 horas (9-12 meses)
-          .btn-path-mini.text-center Saber más
+    .hidden.col-md-4.path-index.path-select.path-form-2
+        .col-md-12.item-path-mini
+          .content-path-head 
+            .text-center.path-2
+              img(src="/images/data.svg", alt="")
+            .title-path Data Science
+          .content2-path-head Diseñaras soluciones a problemas diversos siempre agregando valor al negocio o proyecto a partir de entender el fenómeno con datos.  
+          .time-path-mini.text-center 160 horas (9-12 meses)
+    .hidden.col-md-4.path-index.path-select.path-form-3
+        .col-md-12.item-path-mini
+          .content-path-head 
+            .text-center.path-3
+              img(src="/images/social.svg", alt="")
+            .title-path Data Analysis for Social Sciences
+          .content2-path-head Aprenderás a obtener, estructurar y analizar la información de manera ordenada y eficiente para entender qué es lo que dicen. 
+          .time-path-mini.text-center 160 horas (9-12 meses)
+
 

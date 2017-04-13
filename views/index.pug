@@ -24,7 +24,7 @@ block content
     .title PATHS
     .row
       .col-md-4.item-path-mini
-        .hvr-float
+        a(href="path1").hvr-float
           .content-path-head 
             .text-center.path-1
               img(src="/images/big.svg", alt="")
@@ -37,7 +37,7 @@ block content
           small 
               a(href="cursos") Explorar los cursos
       .col-md-4.item-path-mini
-        .hvr-float
+        a(href="path2").hvr-float
           .content-path-head
             .text-center.path-2
               img(src="/images/data.svg", alt="")
@@ -50,7 +50,7 @@ block content
           small 
               a(href="cursos") Explorar los cursos
       .col-md-4.item-path-mini
-        .hvr-float
+        a(href="path3").hvr-float
           .content-path-head
             .text-center.path-3
               img(src="/images/social.svg", alt="")
@@ -64,15 +64,15 @@ block content
               a(href="cursos") Explorar los cursos
   .jumbotron.techno-index
       .title Tecnologías
-      .row
-        .col-md-1.text-center
+      .row.no-mobile
+        .col-md-1.text-center.no-mobile
           i.fa.fa-chevron-left(aria-hidden='true')
         .col-md-10
           .row
             .col-md-5.text-center.img-techno
               img(src="/images/couch.svg", alt="")
             .col-md-7.text-justify.txt-techno.align-middle Diseñaras soluciones a problemas diversos siempre agregando valor al negocio o proyecto a partir de entender el fenómeno con datos.Diseñaras soluciones a problemas diversos siempre agregando valor al negocio o proyecto a partir de entender el fenómeno con datos.  
-        .col-md-1.text-center
+        .col-md-1.text-center.no-mobile
           i.fa.fa-chevron-right(aria-hidden='true')
       .d-flex.flex-row.tech-options
         img.hvr-float(src="/images/tech/flume.svg", alt="")
@@ -104,11 +104,13 @@ block content
         p En el mundo, del total de desarrolladores las mujeres son sólo el 7.6% vs 88% de hombres. Esta brecha es todavía más grande en la ciencia de datos donde el ratio es de 1 mujer por cada 14 hombres. Creemos que estas diferencias no se deben a falta de talento ni entusiasmo por la tecnología, sino a una marcada desigualdad de oportunidades. En GreenShark queremos apoyar a todas las mujeres que quieran romper esta brecha.
   .container.intro1.intr
     .row
+      .col-md-6.only-mobile.text-center
+        img(src="/images/intro2.svg", alt="")
       .col-md-6.text-justify
         h4 Romper la brecha de género
         br
         p En el mundo, del total de desarrolladores las mujeres son sólo el 7.6% vs 88% de hombres. Esta brecha es todavía más grande en la ciencia de datos donde el ratio es de 1 mujer por cada 14 hombres. Creemos que estas diferencias no se deben a falta de talento ni entusiasmo por la tecnología, sino a una marcada desigualdad de oportunidades. En GreenShark queremos apoyar a todas las mujeres que quieran romper esta brecha.
-      .col-md-6
+      .col-md-6.no-mobile
         img(src="/images/intro2.svg", alt="")
   .container.intro1.intr
     .row
@@ -120,11 +122,13 @@ block content
         p En el mundo, del total de desarrolladores las mujeres son sólo el 7.6% vs 88% de hombres. Esta brecha es todavía más grande en la ciencia de datos donde el ratio es de 1 mujer por cada 14 hombres. Creemos que estas diferencias no se deben a falta de talento ni entusiasmo por la tecnología, sino a una marcada desigualdad de oportunidades. En GreenShark queremos apoyar a todas las mujeres que quieran romper esta brecha.
   .container.intro1.intr
     .row
+      .col-md-6.only-mobile.text-center
+        img(src="/images/intro4.svg", alt="")
       .col-md-6.text-justify
         h4 Romper la brecha de género
         br
         p En el mundo, del total de desarrolladores las mujeres son sólo el 7.6% vs 88% de hombres. Esta brecha es todavía más grande en la ciencia de datos donde el ratio es de 1 mujer por cada 14 hombres. Creemos que estas diferencias no se deben a falta de talento ni entusiasmo por la tecnología, sino a una marcada desigualdad de oportunidades. En GreenShark queremos apoyar a todas las mujeres que quieran romper esta brecha.
-      .col-md-6
+      .col-md-6.no-mobile
         img(src="/images/intro4.svg", alt="")
 
 

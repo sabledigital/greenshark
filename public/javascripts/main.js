@@ -289,26 +289,36 @@ function w_bar(){
   }
 
   
+$(window).on('load, resize', function(){
+    if ($(window).width() <= 992) {
+        //mycode
+    }else{
+
+    }
+})
+
+
 // SCROLL FUNCTION  
   flag=true;
   
   $( window ).scroll(function() {
-      
-      scroll_pos=document.body.scrollTop;
-      console.log(scroll_pos)
-      if(scroll_pos==0){
-           
-            no_bar();
-            flag=true;
-            
-           }else{
-             
-             if(flag){ 
-               w_bar();
-               flag=false;}
-                       
-           }
-  
+      if ($(window).width() >= 992){
+          console.log("w"+$(window).width())
+          scroll_pos=document.body.scrollTop;
+          console.log(scroll_pos)
+          if(scroll_pos==0){
+               
+                no_bar();
+                flag=true;
+                
+               }else{
+                 
+                 if(flag){ 
+                   w_bar();
+                   flag=false;}
+                           
+               }
+      }
   });
   
 
@@ -411,11 +421,17 @@ $("#dropdown03").hover(function() {
 
 $(".direct").click(function(event) {
   formIn();
+  $(".text-in").removeClass('hidden');
 });
 
-$(".remove-in").click(function(event) {
-  formInRemove();
+
+
+$(".support").click(function(event) {
+  formIn();
+  $(".support-in").removeClass('hidden');
 });
+
+
 
 $(".puchline .btn").click(function() {
    mail=$("#footer-form").val();
@@ -423,6 +439,7 @@ $(".puchline .btn").click(function() {
    }else
    formIn($(".puchline input").val());
 });
+
 
 
 $(".index-form .btn").click(function() {
@@ -433,7 +450,24 @@ $(".index-form .btn").click(function() {
 });
 
 
-function formIn(email,path){
+
+
+
+
+
+
+//-------------------
+
+
+
+
+$(".remove-in").click(function(event) {
+  formInRemove();
+});
+
+
+
+function formIn(email,path,course){
 
 $("body").css("overflow","hidden");
 $(".form-in").removeClass('hidden');  
@@ -442,14 +476,22 @@ $(".form-in").jAnimateOnce("fadeIn");
 
 
 
-
-
+// IF HAVE MAIL
   if(email){
     $(".header-in").html("Hola <br><h4 class='green'>"+email+"</h4>");
     $(".email-in").addClass('hidden');
   }
 
 
+//if choose a course or path
+
+    if (path=="1") {$(".path-form-1").removeClass('hidden');$(".path-in").addClass('hidden')}
+    if (path=="2") {$(".path-form-2").removeClass('hidden');$(".path-in").addClass('hidden')}
+    if (path=="3") {$(".path-form-3").removeClass('hidden');$(".path-in").addClass('hidden')}
+
+    if (course=="1") {$(".course-form-1").removeClass('hidden');$(".path-in").addClass('hidden')}
+    if (course=="2") {$(".course-form-2").removeClass('hidden');$(".path-in").addClass('hidden')}
+    if (course=="3") {$(".course-form-3").removeClass('hidden');$(".path-in").addClass('hidden')}
 
 
 
@@ -466,6 +508,20 @@ function formInRemove(){
 
 }
 
+
+
+
+//-------------------
+
+$(".home").click(function(event) {
+  window.location.href = "/";
+});
+
+$(".up").click(function(event) {
+ $('html, body').animate({
+        scrollTop: 0
+    }, 500);
+});
 
 
 
