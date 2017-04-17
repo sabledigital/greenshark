@@ -183,10 +183,9 @@ a:hover {
     padding-left: 1.5rem;
 }
 
-.scroll-nav .dropdown-item {
-	background-color: rgba(240, 248, 255, 0.91);
-	margin-left: 20px;
-	padding:2px;
+.scroll-nav .dropdown-menu {
+	
+	background-color: aliceblue;
 
 }
 
@@ -196,7 +195,11 @@ a:hover {
 }
 
 .scroll-nav .dropdown-menu{
-	margin-top: 25px;
+	margin-top: 18px;
+}
+
+.dropdown-menu{
+	border-radius: 0 0 3px 3px;
 }
 
 

@@ -511,17 +511,29 @@ function formInRemove(){
 
 
 
-//-------------------
+// *****************************
+// *************** Scroll brands
+// *****************************
 
-$(".home").click(function(event) {
-  window.location.href = "/";
+
+$(".techno-index back")click(function(event) {
+  /* Act on the event */
 });
 
-$(".up").click(function(event) {
- $('html, body').animate({
-        scrollTop: 0
-    }, 500);
+$(".techno-index go")click(function(event) {
+  /* Act on the event */
 });
+
+
+$(".tech-options > img").click(function(event) { 
+  element=$(this).attr("class").replace("hvr-float","").replace(" ","");
+  console.log(element)
+  $(".techno-index .col-md-10").addClass('hidden');
+  $(".techno-index ."+element+" ").removeClass('hidden');
+  $(".techno-index ."+element+" ").jAnimateOnce("fadeIn");
+});
+
+
 
 
 
