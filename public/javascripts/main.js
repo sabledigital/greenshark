@@ -514,18 +514,35 @@ function formInRemove(){
 // *****************************
 // *************** Scroll brands
 // *****************************
+slider=1;
+$(".techno-index .s1").removeClass('hidden');
 
 
-$(".techno-index back")click(function(event) {
-  /* Act on the event */
+
+$(".techno-index .back").click(function(event) {
+  console.log("back")
+  $(".techno-index .s"+slider+"").addClass('hidden');
+  slider-=1;
+  if (slider<=0) {slider=17}
+  $(".techno-index .s"+slider+"").removeClass('hidden').jAnimateOnce("fadeIn");
 });
 
-$(".techno-index go")click(function(event) {
-  /* Act on the event */
+
+
+$(".techno-index .go").click(function(event) {
+  console.log("next")
+
+  $(".techno-index .s"+slider+"").addClass('hidden');
+  slider+=1;
+  if (slider>=18) {slider=1}
+  $(".techno-index .s"+slider+"").removeClass('hidden').jAnimateOnce("fadeIn");
+
 });
 
 
-$(".tech-options > img").click(function(event) { 
+$(".tech-options > img").click(function(event) {
+  slider=$(this).attr("slider");
+  slider=parseInt(slider);
   element=$(this).attr("class").replace("hvr-float","").replace(" ","");
   console.log(element)
   $(".techno-index .col-md-10").addClass('hidden');

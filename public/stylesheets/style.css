@@ -4,6 +4,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Miriam+Libre:400,700');
 
+
+
+
+/* *********************** */
+/*        Basics & tools   */
+/* *********************** */
 a:hover{
 	text-decoration: none;
 }
@@ -63,6 +69,18 @@ h1{
 	opacity: .2;
 	color: black;
 }
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 
 
 /* *********************** */
