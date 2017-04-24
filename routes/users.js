@@ -1,9 +1,18 @@
-var express = require('express');
-var router = express.Router();
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/greenshark-dev');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+var Schema = mongoose.Schema;
+
+// create a schema
+var userSchema = new Schema({
+  name: String,
+  email: { type: String, required: true, unique: true },
+  phone: String,
+  origin: String,
+  created_at: { type: String, default: Date.now },
 });
 
-module.exports = router;
+var User = mongoose.model('User', userSchema);
+
+// make this available to our users in our Node applications
+module.exports = User;

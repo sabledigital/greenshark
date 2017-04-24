@@ -2,9 +2,9 @@
 
         // Styles a map in night mode.
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 19.363310, lng: -99.129391}, 
+          center: {lat: 19.363310, lng: -99.129391},
           zoom: 13,
-          disableDefaultUI: true, 
+          disableDefaultUI: true,
           styles: [
   {
     "elementType": "geometry",
@@ -271,24 +271,24 @@
 // *****************************
 
 function w_bar(){
-  
+
   $("#navbarText").addClass('scroll-nav')
   $("#navbarText").jAnimateOnce("fadeInDown")
 
 }
-  
+
   function no_bar(){
   $("#navbarText").jAnimateOnce("fadeOutUp",function(){
     $("#navbarText").removeClass('scroll-nav')
     $("#navbarText").jAnimateOnce("fadeInDown")
   });
-     
-     
+
+
 
 
   }
 
-  
+
 $(window).on('load, resize', function(){
     if ($(window).width() <= 992) {
         //mycode
@@ -298,29 +298,29 @@ $(window).on('load, resize', function(){
 })
 
 
-// SCROLL FUNCTION  
+// SCROLL FUNCTION
   flag=true;
-  
+
   $( window ).scroll(function() {
       if ($(window).width() >= 992){
           console.log("w"+$(window).width())
           scroll_pos=document.body.scrollTop;
           console.log(scroll_pos)
           if(scroll_pos==0){
-               
+
                 no_bar();
                 flag=true;
-                
+
                }else{
-                 
-                 if(flag){ 
+
+                 if(flag){
                    w_bar();
                    flag=false;}
-                           
+
                }
       }
   });
-  
+
 
 
 // *****************************
@@ -336,12 +336,12 @@ message_empty="Proporciona un mail por favor";
 function validateEmail(sEmail) {
   var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
   if (filter.test(sEmail)) {
-    return true;  
-    
+    return true;
+
   }
   else {
     return false;
-    
+
   }
 }
 
@@ -470,7 +470,7 @@ $(".remove-in").click(function(event) {
 function formIn(email,path,course){
 
 $("body").css("overflow","hidden");
-$(".form-in").removeClass('hidden');  
+$(".form-in").removeClass('hidden');
 $(".form-in").jAnimateOnce("fadeIn");
 
 
@@ -549,8 +549,3 @@ $(".tech-options > img").click(function(event) {
   $(".techno-index ."+element+" ").removeClass('hidden');
   $(".techno-index ."+element+" ").jAnimateOnce("fadeIn");
 });
-
-
-
-
-

@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var User = require('./users.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -59,7 +60,26 @@ router.get('/path3', function(req, res, next) {
   res.render('path3', { title: 'Greenshark' });
 });
 
+router.post('/form-submitted', function(req, res, next) {
+  var email = req.body.exampleInputEmail1;
+  var name = req.body.exampleInputname1;
+  var phone = req.body.exampleInputtel1;
 
+  var user = new User({
+    name: name,
+    email: email,
+    phone: phone,
+    origin: origin
+  });
+
+  user.save(function(err){
+    if(err) {
+      res.json({'message': 'Hubo un problema vuelve a intentarlo'})
+    } else {
+      res.json({'message': 'Usuario registrado'})
+    }
+  });
+});
 
 
 module.exports = router;
