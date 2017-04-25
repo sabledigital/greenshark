@@ -35,15 +35,15 @@ router.get('/curso_temp', function(req, res, next) {
 
 //cursos
 
-router.get('/curso1', function(req, res, next) {
+router.get('/introduccion-bigdata', function(req, res, next) {
   res.render('curso1', { title: 'Greenshark' });
 });
 
-router.get('/curso2', function(req, res, next) {
+router.get('/bigdata-engineer', function(req, res, next) {
   res.render('curso2', { title: 'Greenshark' });
 });
 
-router.get('/curso3', function(req, res, next) {
+router.get('/introduccion-ciencia-de-datos', function(req, res, next) {
   res.render('curso3', { title: 'Greenshark' });
 });
 
