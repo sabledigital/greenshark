@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+/*var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/greenshark-dev');
 
 var Schema = mongoose.Schema;
@@ -16,3 +16,10 @@ var User = mongoose.model('User', userSchema);
 
 // make this available to our users in our Node applications
 module.exports = User;
+*/
+
+var express = require('express');
+
+var router = express.Router();
+
+module.exports = router;
