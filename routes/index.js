@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-//var User = require('./users.js');
+var User = require('./users.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -60,27 +60,29 @@ router.get('/path3', function(req, res, next) {
   res.render('path3', { title: 'Greenshark' });
 });
 
-/*
+
 router.post('/form-submitted', function(req, res, next) {
-  var email = req.body.exampleInputEmail1;
-  var name = req.body.exampleInputname1;
-  var phone = req.body.exampleInputtel1;
+  var email = req.body.email || "Sin email";
+  var name = req.body.nombre;
+  var phone = req.body.tel;
+  var course = req.body.cursos || "default";
+  var comments = req.body.comments || "Sin comentarios";
 
   var user = new User({
     name: name,
     email: email,
     phone: phone,
-    origin: origin
+    origin: req.headers.origin
   });
 
   user.save(function(err){
     if(err) {
-      res.json({'message': 'Hubo un problema vuelve a intentarlo'})
+      res.render('index', {'message': '' + err})
     } else {
-      res.json({'message': 'Usuario registrado'})
+      res.render('index', {'message': 'Ok'})
     }
   });
 });
-*/
+
 
 module.exports = router;

@@ -5,41 +5,40 @@
         h1.header-in Registro
         p.tell-in En poco tiempo ya estaras disfrutando de conocimientos nuevos y nuevas experiencias :D.
         br
-        form
+        form(action='/form-submitted',method='post')
             .form-group.email-in
-              label(for='exampleInputEmail1') E-mail 
+              label(for='exampleInputEmail1') E-mail
                 span.req *
               input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Introduce tu  e-mail',autocomplete="on")
               small#emailHelp.form-text.text-muted No te preocupes, nunca compartiremos tu mail con nadie :D
             .form-group.name-in
-              label(for='exampleInputname1') Nombre 
+              label(for='exampleInputname1') Nombre
                 span.req *
-              input#exampleInputname1.form-control(type='name', aria-describedby='nameHelp', placeholder='Introduce tu nombre')
+              input#exampleInputname1.form-control(name="nombre", type='name', aria-describedby='nameHelp', placeholder='Introduce tu nombre')
             .form-group.tel-in
-              label(for='exampleInputtel1') Teléfono 
+              label(for='exampleInputtel1') Teléfono
                 span.req *
-              input#exampleInputtel1.form-control(type='tel', aria-describedby='telHelp', placeholder='Introduce tu teléfono')
+              input#exampleInputtel1.form-control(name="tel", type='tel', aria-describedby='telHelp', placeholder='Introduce tu teléfono')
             .hidden.form-group.text-in
-              label(for='exampleInputtel1') ¿En que te podemos ayudar? 
+              label(for='exampleInputtel1') ¿En que te podemos ayudar?
                 span.req *
-              textarea#exampleInputtext1.form-control(type='text', aria-describedby='textHelp', placeholder='Introduce tu teléfono')
+              textarea#exampleInputtext1.form-control(name="comments", type='text', aria-describedby='textHelp', placeholder='Beca de tu interés')
             .hidden.form-group.support-in
-              label(for='exampleInputtel1') ¿Cuentanos porque necesitas una beca.? 
+              label(for='exampleInputtel1') ¿Cuentanos porque necesitas una beca.?
                 span.req *
-              textarea#exampleInputtext1.form-control(type='support', aria-describedby='supportHelp', placeholder='Aquí')
+              textarea#exampleInputtext1.form-control(name="beca", type='support', aria-describedby='supportHelp', placeholder='Aquí')
             .form-group.path-in
-              label(for='exampleInputpath1') ¿Que curso o path te interesa? 
+              label(for='exampleInputpath1') ¿Que curso o path te interesa?
                 span.req *
-              select#exampleInputpath1.form-control(type='path', aria-describedby='pathHelp', placeholder='Introduce tu teléfono')
-                option(value="1") curso 1
-                option(value="1") curso 2
-                option(value="1") curso 3
-                option(value="1") curso 4
-            a.btn.btn-primary(href="#") Enviar
+              select#exampleInputpath1.form-control(name="cursos", type='path', aria-describedby='pathHelp', placeholder='Curso de tu interés')
+                option(value="big data") Big Data
+                option(value="data science") Data Science
+                option(value="data science social") Data Science For Social
+            input.btn.btn-primary(type="submit", value="Enviar")
     .hidden.col-md-2.path-select.course-form-1
             .one-segment
               .top.curso1
-                .tag 
+                .tag
                   .lett curso
                 .sq
               .bottom.text-center
@@ -50,7 +49,7 @@
     .hidden.col-md-2.path-select.course-form-2
             .one-segment
               .top.curso2
-                .tag 
+                .tag
                   .lett curso
                 .sq
               .bottom.text-center
@@ -61,7 +60,7 @@
     .hidden.col-md-2.path-select.course-form-3
             .one-segment
               .top.curso3
-                .tag 
+                .tag
                   .lett curso
                 .sq
               .bottom.text-center
@@ -75,7 +74,7 @@
 
     .hidden.col-md-4.path-index.path-select.path-form-1
         .col-md-12.item-path-mini
-          .content-path-head 
+          .content-path-head
             .text-center.path-1
               img(src="/images/big.svg", alt="")
             .title-path Big Data
@@ -83,19 +82,17 @@
           .time-path-mini.text-center 160 horas (9-12 meses)
     .hidden.col-md-4.path-index.path-select.path-form-2
         .col-md-12.item-path-mini
-          .content-path-head 
+          .content-path-head
             .text-center.path-2
               img(src="/images/data.svg", alt="")
             .title-path Data Science
-          .content2-path-head Diseñaras soluciones a problemas diversos siempre agregando valor al negocio o proyecto a partir de entender el fenómeno con datos.  
+          .content2-path-head Diseñaras soluciones a problemas diversos siempre agregando valor al negocio o proyecto a partir de entender el fenómeno con datos.
           .time-path-mini.text-center 160 horas (9-12 meses)
     .hidden.col-md-4.path-index.path-select.path-form-3
         .col-md-12.item-path-mini
-          .content-path-head 
+          .content-path-head
             .text-center.path-3
               img(src="/images/social.svg", alt="")
             .title-path Data Analysis for Social Sciences
-          .content2-path-head Aprenderás a obtener, estructurar y analizar la información de manera ordenada y eficiente para entender qué es lo que dicen. 
+          .content2-path-head Aprenderás a obtener, estructurar y analizar la información de manera ordenada y eficiente para entender qué es lo que dicen.
           .time-path-mini.text-center 160 horas (9-12 meses)
-
-
