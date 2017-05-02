@@ -10,6 +10,7 @@ html
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
 
+
     block styles
   body
     include form.pug
@@ -130,6 +131,7 @@ html
     script(src="/javascripts/main.js")
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5AI39fyZxyKYCeDIqDgY3_07flG4yXXA&callback=initMap"
     async defer)
-    script(src="https://www.google.com/recaptcha/api.js")
+    script(src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit")
+
 
     block scripts
