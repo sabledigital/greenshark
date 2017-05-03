@@ -65,17 +65,15 @@ router.get('/path3', function(req, res, next) {
 
 
 router.post('/form-submitted', function(req, res, next) {
-  console.log("Data from forms: " + JSON.stringify(req.body));
   var g_response = req.body["g-recaptcha-response"] || "";
   var g_secret = "6LcguBsUAAAAAFzBjdVzldljaaI6tmbqhk8B6ZtD";
+  var upres = res;
+
 
   if(g_response) {
     request
-    .post('https://www.google.com/recaptcha/api/siteverify')
-    .send({'secret': g_secret, 'response': g_response})
-    .set('Accept', 'application/json')
+    .post('https://www.google.com/recaptcha/api/siteverify?secret=' + g_secret + '&response=' + g_response)
     .end(function(err, res) {
-      console.log(res);
       if(res.body.success) {
         var email = req.body.email || "Sin email";
         var name = req.body.nombre;
@@ -90,17 +88,21 @@ router.post('/form-submitted', function(req, res, next) {
           origin: req.headers.origin
         });
 
+	console.log(JSON.stringify(user));
         user.save(function(err){
           if(err) {
-            res.render('index', {'message': '' + err})
+            console.log("it was an error " + err)
+            upres.redirect('/');
           } else {
-            res.render('index', {'message': 'Ok'})
+		console.log("It wasn an error we're in troubles");
+            upres.redirect('/');
           }
         });
       }
     });
+  } else {
+    res.render('index', {'message': 'Error'})
   }
-  res.render('index', {'message': 'Error'})
 
 });
 
