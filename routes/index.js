@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('./users.js');
+var request = require('request');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -65,26 +66,42 @@ router.get('/path3', function(req, res, next) {
 
 router.post('/form-submitted', function(req, res, next) {
   console.log("Data from forms: " + JSON.stringify(req.body));
-  var email = req.body.email || "Sin email";
-  var name = req.body.nombre;
-  var phone = req.body.tel;
-  var course = req.body.cursos || "default";
-  var comments = req.body.comments || "Sin comentarios";
+  var g_response = req.body["g-recaptcha-response"] || "";
+  var g_secret = "6LcguBsUAAAAAFzBjdVzldljaaI6tmbqhk8B6ZtD";
 
-  var user = new User({
-    name: name,
-    email: email,
-    phone: phone,
-    origin: req.headers.origin
-  });
+  if(g_response) {
+    request
+    .post("https://www.google.com/recaptcha/api/siteverify")
+    .send({'secret': g_secret, 'response': g_response})
+    .set('Accept', 'application/json')
+    .end(function(err, res) {
+      console.log(res);
+      if(res.successs) {
+        var email = req.body.email || "Sin email";
+        var name = req.body.nombre;
+        var phone = req.body.tel;
+        var course = req.body.cursos || "default";
+        var comments = req.body.comments || "Sin comentarios";
 
-  user.save(function(err){
-    if(err) {
-      res.render('index', {'message': '' + err})
-    } else {
-      res.render('index', {'message': 'Ok'})
-    }
-  });
+        var user = new User({
+          name: name,
+          email: email,
+          phone: phone,
+          origin: req.headers.origin
+        });
+
+        user.save(function(err){
+          if(err) {
+            res.render('index', {'message': '' + err})
+          } else {
+            res.render('index', {'message': 'Ok'})
+          }
+        });
+      }
+    });
+  }
+  res.render('index', {'message': 'Error'})
+
 });
 
 
