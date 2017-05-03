@@ -56,12 +56,15 @@ router.get('/path2', function(req, res, next) {
   res.render('path2', { title: 'Greenshark' });
 });
 
+/*
 router.get('/path3', function(req, res, next) {
   res.render('path3', { title: 'Greenshark' });
 });
+*/
 
 
 router.post('/form-submitted', function(req, res, next) {
+  console.log("Data from forms: " + JSON.stringify(req.body));
   var email = req.body.email || "Sin email";
   var name = req.body.nombre;
   var phone = req.body.tel;

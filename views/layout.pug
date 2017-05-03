@@ -36,9 +36,9 @@ html
           li.nav-item.dropdown
             a#dropdown03.no-mobile.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true') Cursos
             .dropdown-menu
-                a.dropdown-item(href='curso1')  Introducción a Big Data
-                a.dropdown-item(href='curso2') Big Data Engineer
-                a.dropdown-item(href='curso3') Introducción a Ciencia de Datos con Python
+                a.dropdown-item(href='introduccion-bigdata')  Introducción a Big Data
+                a.dropdown-item(href='bigdata-engineer') Big Data Engineer
+                a.dropdown-item(href='introduccion-ciencia-de-datos') Introducción a Ciencia de Datos
 
                 a.dropdown-item.all-kind(href='cursos') Todos los cursos
           li.nav-item.dropdown
@@ -46,7 +46,8 @@ html
             .dropdown-menu
                 a.dropdown-item(href='path1') Big Data
                 a.dropdown-item(href='path2') Data Science
-                a.dropdown-item(href='path3') Data Analysis for Social Sciences
+                //
+                  a.dropdown-item(href='path3') Data Analysis for Social Sciences
                 a.dropdown-item.all-kind(href='paths') Todos los paths
 
           li.nav-item
@@ -81,26 +82,27 @@ html
               ul
                 strong Paths
                 li
-                  a(href="#")
-                    small Introducción a Big Data
+                  a(href="path1")
+                    small  Big Data
                 li
+                  a(href="path2")
+                    small Data Science
+                //-
+                  li
                   a(href="#")
-                    small Big Data Engineer
-                li
-                  a(href="#")
-                    small Introducción a Ciencia de Datos con Python
+                  small Introducción a Ciencia de Datos con Python
           .col-md-3
               ul
                 strong Cursos
                 li
-                  a(href="#")
-                    small Big Data
+                  a(href="introduccion-bigdata")
+                    small Introducción a Big Data
                 li
-                  a(href="#")
+                  a(href="bigdata-engineer")
+                    small Big Data Engineer
+                li
+                  a(href="introduccion-ciencia-de-datos")
                     small Data Science
-                li
-                  a(href="#")
-                    small Data Analysis
           .col-md-6.section3-foot
             small
               a(href="mailto:hola@greenshark.com") hola@greenshark.com
@@ -110,7 +112,7 @@ html
               span |
               a(href="tel:(55)-32-23-12") (55)-32-23-12
             br
-            small Calle numero #50 Int. 45 Colonia Cuauhtemoc, CDMX, México 07929.
+            small Lopez Cotilla #1822 ICol. Del Valle, Delegación Benito Juarez CDMX, México 03100.
         .text-center.social-icon
           a(href="#")
             img(src="/images/face.svg", alt="")
@@ -124,6 +126,7 @@ html
 
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src="https://www.google.com/recaptcha/api.js")
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn', crossorigin='anonymous')
@@ -131,7 +134,6 @@ html
     script(src="/javascripts/main.js")
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5AI39fyZxyKYCeDIqDgY3_07flG4yXXA&callback=initMap"
     async defer)
-    script(src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit")
 
 
     block scripts
