@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('./users.js');
-var request = require('request');
+var request = require('superagent');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -71,7 +71,7 @@ router.post('/form-submitted', function(req, res, next) {
 
   if(g_response) {
     request
-    .post("https://www.google.com/recaptcha/api/siteverify")
+    .post('https://www.google.com/recaptcha/api/siteverify')
     .send({'secret': g_secret, 'response': g_response})
     .set('Accept', 'application/json')
     .end(function(err, res) {
