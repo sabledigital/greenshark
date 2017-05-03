@@ -76,7 +76,7 @@ router.post('/form-submitted', function(req, res, next) {
     .set('Accept', 'application/json')
     .end(function(err, res) {
       console.log(res);
-      if(res.successs) {
+      if(res.body.success) {
         var email = req.body.email || "Sin email";
         var name = req.body.nombre;
         var phone = req.body.tel;
