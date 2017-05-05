@@ -32,6 +32,10 @@ app.use(function(req, res, next) {
 });
 
 
+app.get('*',function(req,res){
+    res.redirect('https://greenshark.com.mx'+req.url)
+})
+
 
 // error handler
 app.use(function(err, req, res, next) {
