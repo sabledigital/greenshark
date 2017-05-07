@@ -3,10 +3,14 @@ var router = express.Router();
 var User = require('./users.js');
 var request = require('superagent');
 
-
-router.get('*',function(req,res){
-    res.redirect('https://greenshark.com.mx'+req.url)
-})
+app.get('*', function(req, res, next) {
+    if (req.get('x-forwarded-proto') != "https") {
+        res.set('x-forwarded-proto', 'https');
+        res.redirect('https://' + req.get('host') + req.url);
+    } else {
+        next();
+    }
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
