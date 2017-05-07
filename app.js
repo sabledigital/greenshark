@@ -31,12 +31,6 @@ app.use(function(req, res, next) {
   res.render('404.pug', {title: '404: File Not Found'});
 });
 
-
-app.get('*',function(req,res){
-    res.redirect('https://greenshark.com.mx'+req.url)
-})
-
-
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development

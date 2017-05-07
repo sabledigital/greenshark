@@ -3,6 +3,11 @@ var router = express.Router();
 var User = require('./users.js');
 var request = require('superagent');
 
+
+router.get('*',function(req,res){
+    res.redirect('https://greenshark.com.mx'+req.url)
+})
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Greenshark' });
