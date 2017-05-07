@@ -10,17 +10,16 @@ var http = require('http');
 var fs = require('fs');
 var https = require('https');
 
-var crt1  = fs.readFileSync('sslcert/gd1.crt', 'utf8');
-var crt2 = fs.readFileSync('sslcert/gd2.crt', 'utf8');
-var crt3  = fs.readFileSync('sslcert/my-site.crt', 'utf8');
+
+var crtmaster = fs.readFileSync('sslcert/gd_bundle-g2-g1.crt', 'utf8');
+var my_cert  = fs.readFileSync('sslcert/my-site.crt', 'utf8');
 var privkey = fs.readFileSync('sslcert/pk.key', 'utf8');
 
 /**
  * Get port from environment and store in Express.
  */
 
- var credentials = {key: privkey, certificate: crt3, ca:[crt1, crt2]};
-
+ var credentials = {key: privkey, certificate: my_cert, ca:[crtmaster]};
 
 var port = process.env.PORT || '3000';
 
@@ -28,24 +27,8 @@ var port = process.env.PORT || '3000';
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
-var httpsServer = https.createServer(credentials, app);
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-httpsServer.listen(443);
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
-
-
-
-/**
- * Normalize a port into a number, string, or false.
- */
-
+http.createServer(app).listen(port);
+https.createServer(credentials, app).listen(443);
 
 /**
  * Event listener for HTTP server "error" event.
