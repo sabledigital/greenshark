@@ -2,8 +2,20 @@
 
 }
 
-.photo{
-	background-image: url("../images/profile.png");
+.photojp{
+	background-image: url("../images/jp.png");
+	border:solid 10px black;
+	background-size: cover;
+}
+
+.photoje{
+	background-image: url("../images/jorge.png");
+	border:solid 10px black;
+	background-size: cover;
+}
+
+.photolo{
+	background-image: url("../images/luci.png");
 	border:solid 10px black;
 	background-size: cover;
 }
