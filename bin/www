@@ -11,18 +11,15 @@ var fs = require('fs');
 var https = require('https');
 
 
-var crtmaster = fs.readFileSync('sslcert/gd_bundle-g2-g1.crt', 'utf8');
-var my_cert  = fs.readFileSync('sslcert/csr.crt', 'utf8');
-var privkey = fs.readFileSync('sslcert/greenshark.pem', 'utf8');
+var crtmaster = fs.readFileSync('sslcert/gd_bundle-g2-g1.crt', 'utf8').split("\n");
+var my_cert  = fs.readFileSync('sslcert/cert.crt', 'utf8');
+var privkey = fs.readFileSync('sslcert/pv.key', 'utf8');
+
 
 var d1 = fs.readFileSync('dummy_ssl/key.pem', 'utf8');
 var d2  = fs.readFileSync('dummy_ssl/cert.pem', 'utf8');
 
-/**
- * Get port from environment and store in Express.
- */
-
- var credentials = {key: privkey, cert: my_cert, ca:[crtmaster]};
+// var credentials = {"key": privkey, "cert": my_cert, "ca": ca };
 
  var credentials1 = { key: d1, cert: d2, passphrase: 'frase'};
 

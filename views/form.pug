@@ -3,7 +3,7 @@
         .text-right.remove-in.req.hvr-buzz
             i.fa.fa-times(aria-hidden='true')
         h1.header-in Registro
-        p.tell-in En poco tiempo ya estaras disfrutando de conocimientos nuevos y nuevas experiencias :D.
+        p.tell-in En poco tiempo recibirás información detallada sobre nuestros cursos y paths.
         br
         form(action='/form-submitted',method='post')
             .form-group.email-in
@@ -28,14 +28,14 @@
                 span.req *
               textarea#exampleInputtext1.form-control(name="beca", type='support', aria-describedby='supportHelp', placeholder='Aquí')
             .form-group.path-in
-              label(for='exampleInputpath1') ¿Que curso o path te interesa?
+              label(for='exampleInputpath1') ¿En qué tema estas interesado?
                 span.req *
               select#exampleInputpath1.form-control(name="cursos", type='path', aria-describedby='pathHelp', placeholder='Curso de tu interés')
                 option(value="big data") Big Data
                 option(value="data science") Data Science
                 option(value="data science social") Data Science For Social
             .form-group.path-in
-              <div class="g-recaptcha" data-sitekey="6LcguBsUAAAAAB_TXZTNQ_dDYXvkN30wETZsUSH4"></div>
+              <center><div class="g-recaptcha" data-sitekey="6LcguBsUAAAAAB_TXZTNQ_dDYXvkN30wETZsUSH4"></div></center>
             input.btn.btn-primary(type="submit", value="Enviar")
     .hidden.col-md-2.path-select.course-form-1
             .one-segment
