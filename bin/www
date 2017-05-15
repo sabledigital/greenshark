@@ -35,7 +35,7 @@ var port = process.env.PORT || '3000';
  */
 
 http.createServer(app).listen(port);
-https.createServer(credentials, app).listen(8765);
+//https.createServer(credentials, app).listen(8765);
 
 /**
  * Event listener for HTTP server "error" event.
