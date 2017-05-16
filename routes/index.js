@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var User = require('./users.js');
+//var User = require('./users.js');
 var request = require('superagent');
 /*
 router.get('*', function(req, res, next) {
@@ -73,7 +73,7 @@ router.get('/path3', function(req, res, next) {
 });
 */
 
-
+/*
 router.post('/form-submitted', function(req, res, next) {
   var g_response = req.body["g-recaptcha-response"] || "";
   var g_secret = "6LcguBsUAAAAAFzBjdVzldljaaI6tmbqhk8B6ZtD";
@@ -115,6 +115,6 @@ router.post('/form-submitted', function(req, res, next) {
   }
 
 });
-
+*/
 
 module.exports = router;
