@@ -73,7 +73,6 @@ router.get('/path2', function(req, res, next) {
 // });
 
 
-/*
 router.post('/form-submitted', function(req, res, next) {
   var g_response = req.body["g-recaptcha-response"] || "";
   var g_secret = "6LcguBsUAAAAAFzBjdVzldljaaI6tmbqhk8B6ZtD";
@@ -86,35 +85,37 @@ router.post('/form-submitted', function(req, res, next) {
     .end(function(err, res) {
       if(res.body.success) {
         var email = req.body.email || "Sin email";
-        var name = req.body.nombre;
-        var phone = req.body.tel;
-        var course = req.body.cursos || "default";
-        var comments = req.body.comments || "Sin comentarios";
+        var name = req.body.name;
+        var phone = req.body.phone;
+        var course = req.body.course || "default";
+        var comments = req.body.comentarios || "Sin comentarios";
 
         var user = new User({
           name: name,
           email: email,
           phone: phone,
-          origin: req.headers.origin
+          origin: req.headers.origin,
+          comments: comments,
+          course: course
         });
 
 	console.log(JSON.stringify(user));
         user.save(function(err){
           if(err) {
             console.log("it was an error " + err)
-            upres.redirect('/');
+            upres.json({'meesage': 'Error', 'error' :true});
           } else {
 		console.log("It wasn an error we're in troubles");
-            upres.redirect('/');
+            upres.json({'meesage': 'Éxito', 'error' :false});
           }
         });
       }
     });
   } else {
-    res.render('index', {'message': 'Error'})
+    upres.json({'meesage': 'error', 'error': true});
   }
 
 });
-*/
+
 
 module.exports = router;

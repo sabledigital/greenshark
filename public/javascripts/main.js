@@ -303,9 +303,9 @@ $(window).on('load, resize', function(){
 
   $( window ).scroll(function() {
       if ($(window).width() >= 992){
-          
+
           scroll_pos=document.body.scrollTop;
-         
+
           if(scroll_pos==0){
 
                 no_bar();
@@ -575,21 +575,24 @@ function formValidation(){
 
 
 $(".form-final").click(function(event) {
-  
+
   if (formValidation()) {
-    $(".register-in form").empty();
-    $(".header-in").html("Hey <span class='green'>"+name+"</span>, gracias por dejar tus datos");
-    $(".tell-in").html("Pronto nos pondremos en contacto contigo a <span class='green'>"+email+"</span>");
-    $(".register-in ").jAnimateOnce("fadeInDown");
+    email=$("#exampleInputEmail1").val();
+    name=$("#exampleInputname1").val();
+    tel=$("#exampleInputtel1").val();
+    path=$("#exampleInputpath1").val();
+    comentarios=$("#exampleInputtext1").val();
+    captcha=$("#g-recaptcha-response").val();
 
-  }else{
-    console.log("nel");
+    $.post('/form-submitted', {'email': email, 'name': name, 'phone': tel, 'comentarios': comentarios,'course':  path, 'g-recaptcha-response': captcha}, function(data) {
+      if(data.error) {
+        console.log("nel");
+      } else {
+        $(".register-in form").empty();
+        $(".header-in").html("Hey <span class='green'>"+name+"</span>, gracias por dejar tus datos");
+        $(".tell-in").html("Pronto nos pondremos en contacto contigo a <span class='green'>"+email+"</span>");
+        $(".register-in ").jAnimateOnce("fadeInDown");
+      }
+    });
   }
-
 });
-
-
-
-
-
-
