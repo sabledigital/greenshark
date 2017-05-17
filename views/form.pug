@@ -5,7 +5,7 @@
         h1.header-in Registro
         p.tell-in En poco tiempo recibirás información detallada sobre nuestros cursos y paths.
         br
-        form(action='/form-submitted',method='post')
+        form
             .form-group.email-in
               label(for='exampleInputEmail1') E-mail
                 span.req *
@@ -21,7 +21,7 @@
               input#exampleInputtel1.form-control(name="tel", type='tel', aria-describedby='telHelp', placeholder='Introduce tu teléfono')
             .hidden.form-group.text-in
               label(for='exampleInputtel1') ¿En que te podemos ayudar?
-                span.req *
+                span.req 
               textarea#exampleInputtext1.form-control(name="comments", type='text', aria-describedby='textHelp', placeholder='Beca de tu interés')
             .hidden.form-group.support-in
               label(for='exampleInputtel1') ¿Cuentanos porque necesitas una beca.?
@@ -31,12 +31,19 @@
               label(for='exampleInputpath1') ¿En qué tema estas interesado?
                 span.req *
               select#exampleInputpath1.form-control(name="cursos", type='path', aria-describedby='pathHelp', placeholder='Curso de tu interés')
-                option(value="big data") Big Data
-                option(value="data science") Data Science
-                option(value="data science social") Data Science For Social
-            .form-group.path-in
-              <center><div class="g-recaptcha" data-sitekey="6LcguBsUAAAAAB_TXZTNQ_dDYXvkN30wETZsUSH4"></div></center>
-            input.btn.btn-primary(type="submit", value="Enviar")
+                option(value="ninguno") ---
+                option(value="Introducción a Big Data") Curso: Intro Big Data
+                option(value="Data Engineer") Curso: Data Engineer
+                option(value="Introducción a Ciencia de Datos") Curso: Intro Data Science
+                option(value="Big Data") Path: Big Data
+                option(value="Data Science") Path: Data Science
+            .form-group
+              center
+                div( class="g-recaptcha" data-sitekey="6LcguBsUAAAAAB_TXZTNQ_dDYXvkN30wETZsUSH4")
+            input.btn.btn-primary.form-final( value="Enviar")
+            br
+            .text-center
+              small.mssg-form-final.mssg-form.hidden
     .hidden.col-md-2.path-select.course-form-1
             .one-segment
               .top.curso1

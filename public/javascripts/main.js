@@ -2,7 +2,7 @@
 
         // Styles a map in night mode.
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 19.363310, lng: -99.129391},
+          center: {lat: 19.363678, lng: -99.170567},
           zoom: 13,
           disableDefaultUI: true,
           styles: [
@@ -303,9 +303,9 @@ $(window).on('load, resize', function(){
 
   $( window ).scroll(function() {
       if ($(window).width() >= 992){
-          console.log("w"+$(window).width())
+          
           scroll_pos=document.body.scrollTop;
-          console.log(scroll_pos)
+         
           if(scroll_pos==0){
 
                 no_bar();
@@ -330,74 +330,6 @@ $(window).on('load, resize', function(){
 // *****************************
 // *************** Validation
 // *****************************
-
-message_incorrect= "Este mail es <strong> incorrecto </strong>";
-
-message_incorrect2= "Vuelve a revisar el formulario";
-message_wrong="Este mail es <strong> incorrecto </strong>"
-message_empty="Proporciona un mail por favor";
-
-function validateEmail(sEmail) {
-  var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
-  if (filter.test(sEmail)) {
-    return true;
-
-  }
-  else {
-    return false;
-
-  }
-}
-
-
-function validarFormularioEmail(input){
-
-
-  form_text=$(input).val();
-  console.log(form_text);
-
-  if(form_text == ""){
-      // $("#message_validation").html(message_empty);
-      // $("#message_validation").jAnimate("fadeInDown");
-      $(input).removeClass('ok-form');
-      $(input).addClass('not-form');
-      console.log("vacio");
-      message_incorrect=message_empty;
-      return false;
-
-
-  }else{
-    if (validateEmail(form_text)) {
-      $(input).removeClass('not-form');
-      $(input).addClass('ok-form');
-      console.log("bien");
-      return true;
-
-    }else{
-      $(input).removeClass('ok-form');
-      $(input).addClass('not-form');
-      console.log("mal");
-      message_incorrect=message_wrong;
-      return false;
-    }
-  }
-}
-// *****************************
-// *************** Validation TRIGGERS
-// *****************************
-
-var $input_email = $('#head-index-form');
-$input_email.on('keyup', function () {
-  console.log($input_email)
-    validarFormularioEmail($input_email);
-});
-
-var $input_email_foot = $('#footer-form');
-$input_email_foot.on('keyup', function () {
-  console.log($input_email_foot)
-    validarFormularioEmail($input_email_foot);
-});
-
 
 
 // *****************************
@@ -432,6 +364,8 @@ $(".direct").click(function(event) {
 
 $(".support").click(function(event) {
   formIn();
+  $(".header-in").empty();
+  $(".header-in").html("Aplicación beca");
   $(".support-in").removeClass('hidden');
 });
 
@@ -439,18 +373,25 @@ $(".support").click(function(event) {
 
 $(".puchline .btn").click(function() {
    mail=$("#footer-form").val();
-   if (mail=="") {
-   }else
+  if (validate.email(mail)) {
    formIn($(".puchline input").val());
+  }else{
+      $(".mssg-form").html(message_empty);
+      $(".mssg-form").jAnimateOnce("fadeInDown");
+  }
+
 });
 
 
 
 $(".index-form .btn").click(function() {
-   mail=$("#head-index-form").val();
-   if (mail=="") {
-   }else
+  mail=$("#head-index-form").val();
+  if (validate.email(mail)) {
    formIn($(".index-form input").val());
+  }else{
+      $(".mssg-form").html(message_empty);
+      $(".mssg-form").jAnimateOnce("fadeInDown");
+  }
 });
 
 
@@ -460,7 +401,7 @@ $(".index-form .btn").click(function() {
 
 
 
-//-------------------
+//------------------- RULES FOR FORM CREATION
 
 
 
@@ -473,9 +414,9 @@ $(".remove-in").click(function(event) {
 
 function formIn(email,path,course){
 
-$("body").css("overflow","hidden");
-$(".form-in").removeClass('hidden');
-$(".form-in").jAnimateOnce("fadeIn");
+  $("body").css("overflow","hidden");
+  $(".form-in").removeClass('hidden');
+  $(".form-in").jAnimateOnce("fadeIn");
 
 
 
@@ -484,18 +425,19 @@ $(".form-in").jAnimateOnce("fadeIn");
   if(email){
     $(".header-in").html("Hola <br><h4 class='green'>"+email+"</h4>");
     $(".email-in").addClass('hidden');
+    $("#exampleInputEmail1").val(email);
   }
 
 
 //if choose a course or path
 
-    if (path=="1") {$(".path-form-1").removeClass('hidden');$(".path-in").addClass('hidden')}
-    if (path=="2") {$(".path-form-2").removeClass('hidden');$(".path-in").addClass('hidden')}
-    if (path=="3") {$(".path-form-3").removeClass('hidden');$(".path-in").addClass('hidden')}
+    if (path=="1") {$(".path-form-1").removeClass('hidden');$(".path-in").addClass('hidden'); $('#exampleInputpath1 option:eq(4)').prop('selected', true)  }
+    if (path=="2") {$(".path-form-2").removeClass('hidden');$(".path-in").addClass('hidden'); $('#exampleInputpath1 option:eq(5)').prop('selected', true)  }
+    // if (path=="3") {$(".path-form-3").removeClass('hidden');$(".path-in").addClass('hidden'); $("#exampleInputpath1").val()  }
 
-    if (course=="1") {$(".course-form-1").removeClass('hidden');$(".path-in").addClass('hidden')}
-    if (course=="2") {$(".course-form-2").removeClass('hidden');$(".path-in").addClass('hidden')}
-    if (course=="3") {$(".course-form-3").removeClass('hidden');$(".path-in").addClass('hidden')}
+    if (course=="1") {$(".course-form-1").removeClass('hidden');$(".path-in").addClass('hidden'); $('#exampleInputpath1 option:eq(1)').prop('selected', true) }
+    if (course=="2") {$(".course-form-2").removeClass('hidden');$(".path-in").addClass('hidden'); $('#exampleInputpath1 option:eq(2)').prop('selected', true) }
+    if (course=="3") {$(".course-form-3").removeClass('hidden');$(".path-in").addClass('hidden'); $('#exampleInputpath1 option:eq(3)').prop('selected', true) }
 
 
 
@@ -508,7 +450,22 @@ function formInRemove(){
   $(".form-in").jAnimateOnce("fadeOut",function(){
         $("body").css("overflow","scroll");
         $(".form-in").addClass('hidden');
+
+
+        $(".email-in").removeClass('hidden');
+        $(".name-in").removeClass('hidden');
+        $(".tel-in").removeClass('hidden');
+        $(".text-in").removeClass('hidden');
+        $(".path-in").removeClass('hidden');
+
+
+        $(".support-in").addClass('hidden');
+        $(".path-select").addClass('hidden');
+
   });
+
+
+
 
 }
 
@@ -520,7 +477,6 @@ function formInRemove(){
 // *****************************
 slider=1;
 $(".techno-index .s1").removeClass('hidden');
-
 
 
 $(".techno-index .back").click(function(event) {
@@ -553,3 +509,87 @@ $(".tech-options > img").click(function(event) {
   $(".techno-index ."+element+" ").removeClass('hidden');
   $(".techno-index ."+element+" ").jAnimateOnce("fadeIn");
 });
+
+
+
+
+// *******************************
+// *************** FORM VALIDATION
+// *******************************
+
+function formValidation(){
+
+  email=$("#exampleInputEmail1").val();
+  name=$("#exampleInputname1").val();
+  tel=$("#exampleInputtel1").val();
+  path=$("#exampleInputpath1").val();
+  captcha=$("#g-recaptcha-response").val();
+
+  console.log(email);
+  console.log(name);
+  console.log(tel);
+  console.log(path);
+
+  if (email=="" || !validate.email(email)) {
+    console.log("No hay mail");
+    $(".mssg-form-final").empty();
+    $(".mssg-form-final").html("Revisa de nuevo tu mail, es incorrecto");
+    $(".mssg-form-final").removeClass('hidden')
+    $(".mssg-form-final").jAnimateOnce("fadeInDown");
+  }else
+
+    if (!$("#exampleInputname1").val()) {
+    console.log("No hay name");
+    $(".mssg-form-final").empty();
+    $(".mssg-form-final").html("Tu nombre es muy corto");
+    $(".mssg-form-final").removeClass('hidden')
+    $(".mssg-form-final").jAnimateOnce("fadeInDown");
+  }else
+
+      if (!$("#exampleInputtel1").val()) {
+    console.log("No hay tel");
+    $(".mssg-form-final").empty();
+    $(".mssg-form-final").html("El teléfono es incorrecto");
+    $(".mssg-form-final").removeClass('hidden')
+    $(".mssg-form-final").jAnimateOnce("fadeInDown");
+  }else
+      if ($("#exampleInputpath1").val()=="ninguno") {
+    console.log("No hay path");
+    $(".mssg-form-final").empty();
+    $(".mssg-form-final").html("Selecciona un curso que te interese");
+    $(".mssg-form-final").removeClass('hidden')
+    $(".mssg-form-final").jAnimateOnce("fadeInDown");
+  }else if(captcha==""){
+    $(".mssg-form-final").empty();
+    $(".mssg-form-final").html("¿Eres un robot?");
+    $(".mssg-form-final").removeClass('hidden')
+    $(".mssg-form-final").jAnimateOnce("fadeInDown");
+  }else{
+
+    $(".mssg-form-final").empty();
+    return true
+
+  }
+
+}
+
+
+$(".form-final").click(function(event) {
+  
+  if (formValidation()) {
+    $(".register-in form").empty();
+    $(".header-in").html("Hey <span class='green'>"+name+"</span>, gracias por dejar tus datos");
+    $(".tell-in").html("Pronto nos pondremos en contacto contigo a <span class='green'>"+email+"</span>");
+    $(".register-in ").jAnimateOnce("fadeInDown");
+
+  }else{
+    console.log("nel");
+  }
+
+});
+
+
+
+
+
+

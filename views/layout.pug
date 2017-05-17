@@ -46,6 +46,7 @@ html
             .dropdown-menu
                 a.dropdown-item(href='path1') Big Data
                 a.dropdown-item(href='path2') Data Science
+                //- a.dropdown-item(href='path3') Data Analysis for Social Sciences
                 //
                 a.dropdown-item.all-kind(href='paths') Todos los paths
 
@@ -70,8 +71,9 @@ html
             span.input-group-btn
               button.btn.btn-secondary(type="submit") Quiero más info
           br
+          small.mssg-form.mssg-color-foot
+          br
           a.small(href="cursos")
-
             strong Explorar cursos
     #map
     .final_foot
@@ -86,6 +88,9 @@ html
                 li
                   a(href="path2")
                     small Data Science
+                li
+                  a(href="path3")
+                    small Data Analysis for Social Sciences
                 //-
                   li
                   a(href="#")
@@ -126,10 +131,10 @@ html
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
     script(src="https://www.google.com/recaptcha/api.js")
-
     script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn', crossorigin='anonymous')
     script(src="/vendor/janimate.js")
+    script(src="/javascripts/validators.js")
     script(src="/javascripts/main.js")
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5AI39fyZxyKYCeDIqDgY3_07flG4yXXA&callback=initMap"
     async defer)

@@ -67,11 +67,11 @@ router.get('/path2', function(req, res, next) {
   res.render('path2', { title: 'Greenshark' });
 });
 
-/*
-router.get('/path3', function(req, res, next) {
-  res.render('path3', { title: 'Greenshark' });
-});
-*/
+
+// router.get('/path3', function(req, res, next) {
+//   res.render('path3', { title: 'Greenshark' });
+// });
+
 
 /*
 router.post('/form-submitted', function(req, res, next) {
