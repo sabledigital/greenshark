@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-//var User = require('./users.js');
+var User = require('./users.js');
 var request = require('superagent');
 /*
 router.get('*', function(req, res, next) {
