@@ -103,8 +103,11 @@ router.post('/form-submitted', function(req, res, next) {
   var g_secret = "6LcguBsUAAAAAFzBjdVzldljaaI6tmbqhk8B6ZtD";
   var upres = res;
 
+console.log("Antes del Recap");
 
   if(g_response) {
+    console.log("En el Recap");
+
     request
     .post('https://www.google.com/recaptcha/api/siteverify?secret=' + g_secret + '&response=' + g_response)
     .end(function(err, res) {
@@ -128,6 +131,8 @@ router.post('/form-submitted', function(req, res, next) {
           if(err) {
             upres.json({'meesage': 'Error', 'error' :true});
           } else {
+            console.log("usuario guardado");
+
             var transporter = nodemailer.createTransport('smtps://hola@greenshark.com.mx:Gr33nSh4rk$@smtpout.secureserver.net');
 
             var mailOptions = {
