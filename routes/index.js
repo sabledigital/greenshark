@@ -22,6 +22,14 @@ router.get('/nosotros', function(req, res, next) {
   res.render('nosotros', { title: 'Greenshark' });
 });
 
+router.get('/team-cienciadedatos', function(req, res, next) {
+  res.render('teamcienciadedatos', { title: 'Greenshark' });
+});
+
+router.get('/team-bigdata', function(req, res, next) {
+  res.render('teambigdata', { title: 'Greenshark' });
+});
+
 router.get('/paths', function(req, res, next) {
   res.render('paths', { title: 'Greenshark' });
 });
