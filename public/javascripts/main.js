@@ -594,8 +594,7 @@ $(".form-final").click(function(event) {
       if(data.error) {
         console.log("nel");
       } else {
-        console.log("nel");
-
+        console.log("Ok");
       }
     });
   }
