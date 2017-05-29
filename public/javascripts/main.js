@@ -584,6 +584,12 @@ $(".form-final").click(function(event) {
     comentarios=$("#exampleInputtext1").val();
     captcha=$("#g-recaptcha-response").val();
 
+    $(".register-in form").empty();
+    $(".header-in").html("Hey <span class='green'>"+name+"</span>, gracias por dejar tus datos");
+    $(".tell-in").html("Pronto nos pondremos en contacto contigo a <span class='green'>"+email+"</span>");
+    $(".register-in ").jAnimateOnce("fadeInDown");
+
+/*
     $.post('/form-submitted', {'email': email, 'name': name, 'phone': tel, 'comentarios': comentarios,'course':  path, 'g-recaptcha-response': captcha}, function(data) {
       if(data.error) {
         console.log("nel");
@@ -595,4 +601,6 @@ $(".form-final").click(function(event) {
       }
     });
   }
+  */
+}
 });
