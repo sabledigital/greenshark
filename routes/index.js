@@ -103,7 +103,7 @@ router.post('/form-submitted', function(req, res, next) {
   var g_secret = "6LcguBsUAAAAAFzBjdVzldljaaI6tmbqhk8B6ZtD";
   var upres = res;
 
-console.log("Antes del Recap");
+  console.log("Antes del Recap");
 
   if(g_response) {
     console.log("En el Recap");
@@ -146,11 +146,11 @@ console.log("Antes del Recap");
           // send mail with defined transport object
           transporter.sendMail(mailOptions, function(error, info){
               if(error){
-                coinsole.log("Mensaje error de mail");
+                console.log("Mensaje error de mail");
                 upres.json({'meesage': 'error', 'error': true});
               } else {
                 upres.json({'meesage': 'Éxito', 'error' :false});
-                coinsole.log("Mensaje éxito de mail");
+                console.log("Mensaje éxito de mail");
               }
           });
         }
