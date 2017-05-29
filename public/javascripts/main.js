@@ -590,15 +590,13 @@ $(".form-final").click(function(event) {
     $(".register-in ").jAnimateOnce("fadeInDown");
 
 
-
     $.post('/form-submitted', {'email': email, 'name': name, 'phone': tel, 'comentarios': comentarios,'course':  path, 'g-recaptcha-response': captcha}, function(data) {
       if(data.error) {
         console.log("nel");
       } else {
-        console.log("GOOD");
+        console.log("nel");
 
       }
     });
   }
-}
 });
