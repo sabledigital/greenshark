@@ -711,6 +711,18 @@ list-style-type: none;
 
 
 
+
+}
+
+@media (max-width: 600px) {
+	.input-group-lg>.input-group-btn>.btn{
+		    padding-left: 10px;
+    		padding-right: 10px;
+	}
+
+	h1{
+		font-size: 2em;
+	}
 }
 
 
