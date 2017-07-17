@@ -4,19 +4,25 @@
 
 .photojp{
 	background-image: url("../images/jp.png");
-	border:solid 10px black;
+	border:solid 5px black;
 	background-size: cover;
 }
 
 .photoje{
 	background-image: url("../images/jorge.png");
-	border:solid 10px black;
+	border:solid 5px black;
 	background-size: cover;
 }
 
 .photolo{
 	background-image: url("../images/luci.png");
-	border:solid 10px black;
+	border:solid 5px black;
+	background-size: cover;
+}
+
+.photojr{
+	background-image: url("../images/jared.jpg");
+	border:solid 5px black;
 	background-size: cover;
 }
 
