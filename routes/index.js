@@ -68,11 +68,6 @@ router.get('/introduccion-ciencia-de-datos', function(req, res, next) {
   res.render('curso3', { title: 'Greenshark' });
 });
 
-
-//*********
-// Cretae the views
-// ********
-
 router.get('/data-analyst', function(req, res, next) {
   res.render('curso4', { title: 'Greenshark' });
 });
@@ -89,10 +84,6 @@ router.get('/data-solution-architect', function(req, res, next) {
   res.render('curso7', { title: 'Greenshark' });
 });
 
-
-//*********
-// end
-// ********
 
 
 //paths
