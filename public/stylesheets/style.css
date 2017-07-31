@@ -168,7 +168,7 @@ a:hover {
 }
 
 .dropdown-menu{
-	background-color: rgba(0,0,0,0);
+	background-color: rgba(180, 209, 243, 1);
 }
 
 .navbar,.navbar-brand{
@@ -206,7 +206,7 @@ a:hover {
 }
 
 .scroll-nav .dropdown-menu {
-	
+
 	background-color: aliceblue;
 
 }
@@ -235,17 +235,17 @@ a:hover {
 		padding-left: 26px;
 		padding-right: 23px;
 
-	    color: rgba(0,0,0,.5);
-	    
+	    color: rgba(0,0,0,.7);
+
 	}
 .dropdown-menu{
-	
+
 	border:0px;
 }
 
 .dropdown-item:focus, .dropdown-item:hover{
 	background-color: rgba(0,0,0,0);
-	
+
 }
 
 /* *********************** */
@@ -255,7 +255,7 @@ a:hover {
 
 
 .register-now{
-		background: url(/images/register-now.png); 
+		background: url(/images/register-now.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -293,7 +293,7 @@ a:hover {
 }
 
 .foot-row li{
-list-style-type: none;	
+list-style-type: none;
     padding-left: 19px;
     padding-top: 10px;
 }
@@ -313,7 +313,7 @@ list-style-type: none;
 
 .social-icon img{
 	height: 22px;
-	margin:20px;	
+	margin:20px;
 }
 
 .shark{
@@ -348,7 +348,7 @@ list-style-type: none;
     border-right: 0 !important;
 }
 .not-form{
-	
+
 
 }
 .punchline{
@@ -598,7 +598,7 @@ list-style-type: none;
 	display: inline;
 	padding: 10px;
 	top: 0px;
-	background-color:#08FFBE; 
+	background-color:#08FFBE;
 	border-radius: 0 0 8px 8px;
 }
 
@@ -681,13 +681,13 @@ list-style-type: none;
 	.only-mobile{
 		display: block;
 	}
-	
+
 
 
 	.tech-options img {
     max-width: 33.33% !important;
     cursor: pointer;
-		
+
 		}
 	.tech-options{
 		display: block !important
@@ -724,5 +724,3 @@ list-style-type: none;
 		font-size: 2em;
 	}
 }
-
-
