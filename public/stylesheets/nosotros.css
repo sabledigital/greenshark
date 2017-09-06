@@ -20,6 +20,12 @@
 	background-size: cover;
 }
 
+.photosn{
+	background-image: url("../images/salvador-tovar.jpg");
+	border:solid 5px black;
+	background-size: cover;
+}
+
 .photojr{
 	background-image: url("../images/jared.jpg");
 	border:solid 5px black;
