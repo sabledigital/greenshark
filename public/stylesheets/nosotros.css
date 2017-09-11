@@ -26,6 +26,12 @@
 	background-size: cover;
 }
 
+.photois {
+	background-image: url("../images/irving_simonin.jpg");
+	border:solid 5px black;
+	background-size: cover;
+}
+
 .photojr{
 	background-image: url("../images/jared.jpg");
 	border:solid 5px black;
